@@ -5,13 +5,9 @@
 <edmx:StorageModels>
 <Schema Namespace="DbModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="DbModelStoreContainer">
-    <EntitySet Name="ActivityLog" EntityType="DbModel.Store.ActivityLog" store:Type="Tables" />
     <EntitySet Name="Address" EntityType="DbModel.Store.Address" store:Type="Tables" />
     <EntitySet Name="BackInStockSubscription" EntityType="DbModel.Store.BackInStockSubscription" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="DbModel.Store.Category" store:Type="Tables" />
-    <EntitySet Name="CategoryTemplate" EntityType="DbModel.Store.CategoryTemplate" store:Type="Tables" />
-    <EntitySet Name="CheckoutAttribute" EntityType="DbModel.Store.CheckoutAttribute" store:Type="Tables" />
-    <EntitySet Name="CheckoutAttributeValue" EntityType="DbModel.Store.CheckoutAttributeValue" store:Type="Tables" />
     <EntitySet Name="Country" EntityType="DbModel.Store.Country" store:Type="Tables" />
     <EntitySet Name="Customer" EntityType="DbModel.Store.Customer" store:Type="Tables" />
     <EntitySet Name="Customer_CustomerRole_Mapping" EntityType="DbModel.Store.Customer_CustomerRole_Mapping" store:Type="Tables" />
@@ -24,15 +20,7 @@
     <EntitySet Name="Discount_AppliedToProducts" EntityType="DbModel.Store.Discount_AppliedToProducts" store:Type="Tables" />
     <EntitySet Name="DiscountRequirement" EntityType="DbModel.Store.DiscountRequirement" store:Type="Tables" />
     <EntitySet Name="DiscountUsageHistory" EntityType="DbModel.Store.DiscountUsageHistory" store:Type="Tables" />
-    <EntitySet Name="EmailAccount" EntityType="DbModel.Store.EmailAccount" store:Type="Tables" />
-    <EntitySet Name="ExternalAuthenticationRecord" EntityType="DbModel.Store.ExternalAuthenticationRecord" store:Type="Tables" />
-    <EntitySet Name="GiftCard" EntityType="DbModel.Store.GiftCard" store:Type="Tables" />
-    <EntitySet Name="GiftCardUsageHistory" EntityType="DbModel.Store.GiftCardUsageHistory" store:Type="Tables" />
     <EntitySet Name="Manufacturer" EntityType="DbModel.Store.Manufacturer" store:Type="Tables" />
-    <EntitySet Name="ManufacturerTemplate" EntityType="DbModel.Store.ManufacturerTemplate" store:Type="Tables" />
-    <EntitySet Name="MessageTemplate" EntityType="DbModel.Store.MessageTemplate" store:Type="Tables" />
-    <EntitySet Name="News" EntityType="DbModel.Store.News" store:Type="Tables" />
-    <EntitySet Name="NewsComment" EntityType="DbModel.Store.NewsComment" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="DbModel.Store.Order" store:Type="Tables" />
     <EntitySet Name="OrderItem" EntityType="DbModel.Store.OrderItem" store:Type="Tables" />
     <EntitySet Name="Picture" EntityType="DbModel.Store.Picture" store:Type="Tables" />
@@ -43,17 +31,14 @@
     <EntitySet Name="Product_ProductAttribute_Mapping" EntityType="DbModel.Store.Product_ProductAttribute_Mapping" store:Type="Tables" />
     <EntitySet Name="Product_SpecificationAttribute_Mapping" EntityType="DbModel.Store.Product_SpecificationAttribute_Mapping" store:Type="Tables" />
     <EntitySet Name="ProductAttribute" EntityType="DbModel.Store.ProductAttribute" store:Type="Tables" />
-    <EntitySet Name="ProductAttributeCombination" EntityType="DbModel.Store.ProductAttributeCombination" store:Type="Tables" />
     <EntitySet Name="ProductAttributeValue" EntityType="DbModel.Store.ProductAttributeValue" store:Type="Tables" />
     <EntitySet Name="ProductReview" EntityType="DbModel.Store.ProductReview" store:Type="Tables" />
     <EntitySet Name="ProductReviewHelpfulness" EntityType="DbModel.Store.ProductReviewHelpfulness" store:Type="Tables" />
     <EntitySet Name="ProductWarehouseInventory" EntityType="DbModel.Store.ProductWarehouseInventory" store:Type="Tables" />
-    <EntitySet Name="QueuedEmail" EntityType="DbModel.Store.QueuedEmail" store:Type="Tables" />
     <EntitySet Name="RecurringPayment" EntityType="DbModel.Store.RecurringPayment" store:Type="Tables" />
     <EntitySet Name="ReturnRequest" EntityType="DbModel.Store.ReturnRequest" store:Type="Tables" />
     <EntitySet Name="ReturnRequestAction" EntityType="DbModel.Store.ReturnRequestAction" store:Type="Tables" />
     <EntitySet Name="ReturnRequestReason" EntityType="DbModel.Store.ReturnRequestReason" store:Type="Tables" />
-    <EntitySet Name="RewardPointsHistory" EntityType="DbModel.Store.RewardPointsHistory" store:Type="Tables" />
     <EntitySet Name="Shipment" EntityType="DbModel.Store.Shipment" store:Type="Tables" />
     <EntitySet Name="ShipmentItem" EntityType="DbModel.Store.ShipmentItem" store:Type="Tables" />
     <EntitySet Name="ShippingMethod" EntityType="DbModel.Store.ShippingMethod" store:Type="Tables" />
@@ -62,15 +47,8 @@
     <EntitySet Name="StateProvince" EntityType="DbModel.Store.StateProvince" store:Type="Tables" />
     <EntitySet Name="Store" EntityType="DbModel.Store.Store" store:Type="Tables" />
     <EntitySet Name="StoreMapping" EntityType="DbModel.Store.StoreMapping" store:Type="Tables" />
-    <EntitySet Name="TaxCategory" EntityType="DbModel.Store.TaxCategory" store:Type="Tables" />
-    <EntitySet Name="TaxRate" EntityType="DbModel.Store.TaxRate" store:Type="Tables" />
-    <EntitySet Name="TierPrice" EntityType="DbModel.Store.TierPrice" store:Type="Tables" />
     <EntitySet Name="Vendor" EntityType="DbModel.Store.Vendor" store:Type="Tables" />
     <EntitySet Name="Warehouse" EntityType="DbModel.Store.Warehouse" store:Type="Tables" />
-    <AssociationSet Name="FK_dbo_ActivityLog_dbo_Customer_CustomerId" Association="DbModel.Store.FK_dbo_ActivityLog_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="ActivityLog" EntitySet="ActivityLog" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_Address_dbo_Country_CountryId" Association="DbModel.Store.FK_dbo_Address_dbo_Country_CountryId">
       <End Role="Country" EntitySet="Country" />
       <End Role="Address" EntitySet="Address" />
@@ -86,10 +64,6 @@
     <AssociationSet Name="FK_dbo_BackInStockSubscription_dbo_Product_ProductId" Association="DbModel.Store.FK_dbo_BackInStockSubscription_dbo_Product_ProductId">
       <End Role="Product" EntitySet="Product" />
       <End Role="BackInStockSubscription" EntitySet="BackInStockSubscription" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId" Association="DbModel.Store.FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId">
-      <End Role="CheckoutAttribute" EntitySet="CheckoutAttribute" />
-      <End Role="CheckoutAttributeValue" EntitySet="CheckoutAttributeValue" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_Customer_CustomerRole_Mapping_dbo_Customer_Customer_Id" Association="DbModel.Store.FK_dbo_Customer_CustomerRole_Mapping_dbo_Customer_Customer_Id">
       <End Role="Customer" EntitySet="Customer" />
@@ -151,30 +125,6 @@
       <End Role="Order" EntitySet="Order" />
       <End Role="DiscountUsageHistory" EntitySet="DiscountUsageHistory" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId" Association="DbModel.Store.FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="ExternalAuthenticationRecord" EntitySet="ExternalAuthenticationRecord" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId" Association="DbModel.Store.FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId">
-      <End Role="OrderItem" EntitySet="OrderItem" />
-      <End Role="GiftCard" EntitySet="GiftCard" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId" Association="DbModel.Store.FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId">
-      <End Role="GiftCard" EntitySet="GiftCard" />
-      <End Role="GiftCardUsageHistory" EntitySet="GiftCardUsageHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId" Association="DbModel.Store.FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId">
-      <End Role="Order" EntitySet="Order" />
-      <End Role="GiftCardUsageHistory" EntitySet="GiftCardUsageHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_NewsComment_dbo_Customer_CustomerId" Association="DbModel.Store.FK_dbo_NewsComment_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="NewsComment" EntitySet="NewsComment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_NewsComment_dbo_News_NewsItemId" Association="DbModel.Store.FK_dbo_NewsComment_dbo_News_NewsItemId">
-      <End Role="News" EntitySet="News" />
-      <End Role="NewsComment" EntitySet="NewsComment" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_Order_dbo_Address_BillingAddressId" Association="DbModel.Store.FK_dbo_Order_dbo_Address_BillingAddressId">
       <End Role="Address" EntitySet="Address" />
       <End Role="Order" EntitySet="Order" />
@@ -231,10 +181,6 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="Product_SpecificationAttribute_Mapping" EntitySet="Product_SpecificationAttribute_Mapping" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_ProductAttributeCombination_dbo_Product_ProductId" Association="DbModel.Store.FK_dbo_ProductAttributeCombination_dbo_Product_ProductId">
-      <End Role="Product" EntitySet="Product" />
-      <End Role="ProductAttributeCombination" EntitySet="ProductAttributeCombination" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_ProductAttributeValue_dbo_Product_ProductAttribute_Mapping_ProductAttributeMappingId" Association="DbModel.Store.FK_dbo_ProductAttributeValue_dbo_Product_ProductAttribute_Mapping_ProductAttributeMappingId">
       <End Role="Product_ProductAttribute_Mapping" EntitySet="Product_ProductAttribute_Mapping" />
       <End Role="ProductAttributeValue" EntitySet="ProductAttributeValue" />
@@ -259,10 +205,6 @@
       <End Role="Warehouse" EntitySet="Warehouse" />
       <End Role="ProductWarehouseInventory" EntitySet="ProductWarehouseInventory" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId" Association="DbModel.Store.FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId">
-      <End Role="EmailAccount" EntitySet="EmailAccount" />
-      <End Role="QueuedEmail" EntitySet="QueuedEmail" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_RecurringPayment_dbo_Order_InitialOrderId" Association="DbModel.Store.FK_dbo_RecurringPayment_dbo_Order_InitialOrderId">
       <End Role="Order" EntitySet="Order" />
       <End Role="RecurringPayment" EntitySet="RecurringPayment" />
@@ -270,14 +212,6 @@
     <AssociationSet Name="FK_dbo_ReturnRequest_dbo_Customer_CustomerId" Association="DbModel.Store.FK_dbo_ReturnRequest_dbo_Customer_CustomerId">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="ReturnRequest" EntitySet="ReturnRequest" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId" Association="DbModel.Store.FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="RewardPointsHistory" EntitySet="RewardPointsHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id" Association="DbModel.Store.FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id">
-      <End Role="Order" EntitySet="Order" />
-      <End Role="RewardPointsHistory" EntitySet="RewardPointsHistory" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_Shipment_dbo_Order_OrderId" Association="DbModel.Store.FK_dbo_Shipment_dbo_Order_OrderId">
       <End Role="Order" EntitySet="Order" />
@@ -311,25 +245,7 @@
       <End Role="Store" EntitySet="Store" />
       <End Role="StoreMapping" EntitySet="StoreMapping" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId" Association="DbModel.Store.FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId">
-      <End Role="CustomerRole" EntitySet="CustomerRole" />
-      <End Role="TierPrice" EntitySet="TierPrice" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_TierPrice_dbo_Product_ProductId" Association="DbModel.Store.FK_dbo_TierPrice_dbo_Product_ProductId">
-      <End Role="Product" EntitySet="Product" />
-      <End Role="TierPrice" EntitySet="TierPrice" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="ActivityLog">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ActivityLogTypeId" Type="int" Nullable="false" />
-    <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="Comment" Type="nvarchar" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
-  </EntityType>
+    </EntityContainer>
   <EntityType Name="Address">
     <Key>
       <PropertyRef Name="Id" />
@@ -386,48 +302,6 @@
     <Property Name="DisplayOrder" Type="int" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
     <Property Name="UpdatedOnUtc" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CategoryTemplate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="ViewPath" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="DisplayOrder" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CheckoutAttribute">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="TextPrompt" Type="nvarchar" />
-    <Property Name="IsRequired" Type="bit" Nullable="false" />
-    <Property Name="ShippableProductRequired" Type="bit" Nullable="false" />
-    <Property Name="IsTaxExempt" Type="bit" Nullable="false" />
-    <Property Name="TaxCategoryId" Type="int" Nullable="false" />
-    <Property Name="AttributeControlTypeId" Type="int" Nullable="false" />
-    <Property Name="DisplayOrder" Type="int" Nullable="false" />
-    <Property Name="LimitedToStores" Type="bit" Nullable="false" />
-    <Property Name="ValidationMinLength" Type="int" />
-    <Property Name="ValidationMaxLength" Type="int" />
-    <Property Name="ValidationFileAllowedExtensions" Type="nvarchar" />
-    <Property Name="ValidationFileMaximumSize" Type="int" />
-    <Property Name="DefaultValue" Type="nvarchar" />
-  </EntityType>
-  <EntityType Name="CheckoutAttributeValue">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="CheckoutAttributeId" Type="int" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="ColorSquaresRgb" Type="nvarchar" MaxLength="100" />
-    <Property Name="PriceAdjustment" Type="numeric" Nullable="false" Scale="4" />
-    <Property Name="WeightAdjustment" Type="numeric" Nullable="false" Scale="4" />
-    <Property Name="IsPreSelected" Type="bit" Nullable="false" />
-    <Property Name="DisplayOrder" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Country">
     <Key>
@@ -570,61 +444,6 @@
     <Property Name="OrderId" Type="int" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
   </EntityType>
-  <EntityType Name="EmailAccount">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="DisplayName" Type="nvarchar" MaxLength="255" />
-    <Property Name="Host" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="Port" Type="int" Nullable="false" />
-    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="EnableSsl" Type="bit" Nullable="false" />
-    <Property Name="UseDefaultCredentials" Type="bit" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ExternalAuthenticationRecord">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" />
-    <Property Name="ExternalIdentifier" Type="nvarchar" />
-    <Property Name="ExternalDisplayIdentifier" Type="nvarchar" />
-    <Property Name="OAuthToken" Type="nvarchar" />
-    <Property Name="OAuthAccessToken" Type="nvarchar" />
-    <Property Name="ProviderSystemName" Type="nvarchar" />
-  </EntityType>
-  <EntityType Name="GiftCard">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="PurchasedWithOrderItemId" Type="int" />
-    <Property Name="GiftCardTypeId" Type="int" Nullable="false" />
-    <Property Name="Amount" Type="numeric" Nullable="false" Scale="4" />
-    <Property Name="IsGiftCardActivated" Type="bit" Nullable="false" />
-    <Property Name="GiftCardCouponCode" Type="nvarchar" />
-    <Property Name="RecipientName" Type="nvarchar" />
-    <Property Name="RecipientEmail" Type="nvarchar" />
-    <Property Name="SenderName" Type="nvarchar" />
-    <Property Name="SenderEmail" Type="nvarchar" />
-    <Property Name="Message" Type="nvarchar" />
-    <Property Name="IsRecipientNotified" Type="bit" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="GiftCardUsageHistory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="GiftCardId" Type="int" Nullable="false" />
-    <Property Name="UsedWithOrderId" Type="int" Nullable="false" />
-    <Property Name="UsedValue" Type="numeric" Nullable="false" Scale="4" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
-  </EntityType>
   <EntityType Name="Manufacturer">
     <Key>
       <PropertyRef Name="Id" />
@@ -648,60 +467,6 @@
     <Property Name="DisplayOrder" Type="int" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
     <Property Name="UpdatedOnUtc" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ManufacturerTemplate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="ViewPath" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="DisplayOrder" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="MessageTemplate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
-    <Property Name="BccEmailAddresses" Type="nvarchar" MaxLength="200" />
-    <Property Name="Subject" Type="nvarchar" MaxLength="1000" />
-    <Property Name="Body" Type="nvarchar" />
-    <Property Name="IsActive" Type="bit" Nullable="false" />
-    <Property Name="AttachedDownloadId" Type="int" Nullable="false" />
-    <Property Name="EmailAccountId" Type="int" Nullable="false" />
-    <Property Name="LimitedToStores" Type="bit" Nullable="false" />
-  </EntityType>
-  <EntityType Name="News">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="LanguageId" Type="int" Nullable="false" />
-    <Property Name="Title" Type="nvarchar" Nullable="false" />
-    <Property Name="Short" Type="nvarchar" Nullable="false" />
-    <Property Name="Full" Type="nvarchar" Nullable="false" />
-    <Property Name="Published" Type="bit" Nullable="false" />
-    <Property Name="StartDateUtc" Type="datetime" />
-    <Property Name="EndDateUtc" Type="datetime" />
-    <Property Name="AllowComments" Type="bit" Nullable="false" />
-    <Property Name="CommentCount" Type="int" Nullable="false" />
-    <Property Name="LimitedToStores" Type="bit" Nullable="false" />
-    <Property Name="MetaKeywords" Type="nvarchar" MaxLength="400" />
-    <Property Name="MetaDescription" Type="nvarchar" />
-    <Property Name="MetaTitle" Type="nvarchar" MaxLength="400" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="NewsComment">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="CommentTitle" Type="nvarchar" />
-    <Property Name="CommentText" Type="nvarchar" />
-    <Property Name="NewsItemId" Type="int" Nullable="false" />
-    <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -977,21 +742,6 @@
     <Property Name="Name" Type="nvarchar" Nullable="false" />
     <Property Name="Description" Type="nvarchar" />
   </EntityType>
-  <EntityType Name="ProductAttributeCombination">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ProductId" Type="int" Nullable="false" />
-    <Property Name="AttributesXml" Type="nvarchar" />
-    <Property Name="StockQuantity" Type="int" Nullable="false" />
-    <Property Name="AllowOutOfStockOrders" Type="bit" Nullable="false" />
-    <Property Name="Sku" Type="nvarchar" MaxLength="400" />
-    <Property Name="ManufacturerPartNumber" Type="nvarchar" MaxLength="400" />
-    <Property Name="Gtin" Type="nvarchar" MaxLength="400" />
-    <Property Name="OverriddenPrice" Type="numeric" Scale="4" />
-    <Property Name="NotifyAdminForQuantityBelow" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="ProductAttributeValue">
     <Key>
       <PropertyRef Name="Id" />
@@ -1044,30 +794,6 @@
     <Property Name="StockQuantity" Type="int" Nullable="false" />
     <Property Name="ReservedQuantity" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="QueuedEmail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="PriorityId" Type="int" Nullable="false" />
-    <Property Name="From" Type="nvarchar" Nullable="false" MaxLength="500" />
-    <Property Name="FromName" Type="nvarchar" MaxLength="500" />
-    <Property Name="To" Type="nvarchar" Nullable="false" MaxLength="500" />
-    <Property Name="ToName" Type="nvarchar" MaxLength="500" />
-    <Property Name="ReplyTo" Type="nvarchar" MaxLength="500" />
-    <Property Name="ReplyToName" Type="nvarchar" MaxLength="500" />
-    <Property Name="CC" Type="nvarchar" MaxLength="500" />
-    <Property Name="Bcc" Type="nvarchar" MaxLength="500" />
-    <Property Name="Subject" Type="nvarchar" MaxLength="1000" />
-    <Property Name="Body" Type="nvarchar" />
-    <Property Name="AttachmentFilePath" Type="nvarchar" />
-    <Property Name="AttachmentFileName" Type="nvarchar" />
-    <Property Name="AttachedDownloadId" Type="int" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
-    <Property Name="SentTries" Type="int" Nullable="false" />
-    <Property Name="SentOnUtc" Type="datetime" />
-    <Property Name="EmailAccountId" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="RecurringPayment">
     <Key>
       <PropertyRef Name="Id" />
@@ -1114,20 +840,6 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="400" />
     <Property Name="DisplayOrder" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="RewardPointsHistory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="StoreId" Type="int" Nullable="false" />
-    <Property Name="Points" Type="int" Nullable="false" />
-    <Property Name="PointsBalance" Type="int" Nullable="false" />
-    <Property Name="UsedAmount" Type="numeric" Nullable="false" Scale="4" />
-    <Property Name="Message" Type="nvarchar" />
-    <Property Name="CreatedOnUtc" Type="datetime" Nullable="false" />
-    <Property Name="UsedWithOrder_Id" Type="int" />
   </EntityType>
   <EntityType Name="Shipment">
     <Key>
@@ -1223,37 +935,6 @@
     <Property Name="EntityName" Type="nvarchar" Nullable="false" MaxLength="400" />
     <Property Name="StoreId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="TaxCategory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="400" />
-    <Property Name="DisplayOrder" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TaxRate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="StoreId" Type="int" Nullable="false" />
-    <Property Name="TaxCategoryId" Type="int" Nullable="false" />
-    <Property Name="CountryId" Type="int" Nullable="false" />
-    <Property Name="StateProvinceId" Type="int" Nullable="false" />
-    <Property Name="Zip" Type="nvarchar" />
-    <Property Name="Percentage" Type="numeric" Nullable="false" Scale="4" />
-  </EntityType>
-  <EntityType Name="TierPrice">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ProductId" Type="int" Nullable="false" />
-    <Property Name="StoreId" Type="int" Nullable="false" />
-    <Property Name="CustomerRoleId" Type="int" />
-    <Property Name="Quantity" Type="int" Nullable="false" />
-    <Property Name="Price" Type="numeric" Nullable="false" Scale="4" />
-  </EntityType>
   <EntityType Name="Vendor">
     <Key>
       <PropertyRef Name="Id" />
@@ -1283,20 +964,6 @@
     <Property Name="AdminComment" Type="nvarchar" />
     <Property Name="AddressId" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK_dbo_ActivityLog_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Store.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ActivityLog" Type="DbModel.Store.ActivityLog" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ActivityLog">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_Address_dbo_Country_CountryId">
     <End Role="Country" Type="DbModel.Store.Country" Multiplicity="0..1" />
     <End Role="Address" Type="DbModel.Store.Address" Multiplicity="*" />
@@ -1346,20 +1013,6 @@
       </Principal>
       <Dependent Role="BackInStockSubscription">
         <PropertyRef Name="ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId">
-    <End Role="CheckoutAttribute" Type="DbModel.Store.CheckoutAttribute" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="CheckoutAttributeValue" Type="DbModel.Store.CheckoutAttributeValue" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CheckoutAttribute">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="CheckoutAttributeValue">
-        <PropertyRef Name="CheckoutAttributeId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1569,88 +1222,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Store.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ExternalAuthenticationRecord" Type="DbModel.Store.ExternalAuthenticationRecord" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ExternalAuthenticationRecord">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId">
-    <End Role="OrderItem" Type="DbModel.Store.OrderItem" Multiplicity="0..1" />
-    <End Role="GiftCard" Type="DbModel.Store.GiftCard" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrderItem">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="GiftCard">
-        <PropertyRef Name="PurchasedWithOrderItemId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId">
-    <End Role="GiftCard" Type="DbModel.Store.GiftCard" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="GiftCardUsageHistory" Type="DbModel.Store.GiftCardUsageHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GiftCard">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="GiftCardUsageHistory">
-        <PropertyRef Name="GiftCardId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId">
-    <End Role="Order" Type="DbModel.Store.Order" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="GiftCardUsageHistory" Type="DbModel.Store.GiftCardUsageHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Order">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="GiftCardUsageHistory">
-        <PropertyRef Name="UsedWithOrderId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_NewsComment_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Store.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="NewsComment" Type="DbModel.Store.NewsComment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="NewsComment">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_NewsComment_dbo_News_NewsItemId">
-    <End Role="News" Type="DbModel.Store.News" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="NewsComment" Type="DbModel.Store.NewsComment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="News">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="NewsComment">
-        <PropertyRef Name="NewsItemId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_Order_dbo_Address_BillingAddressId">
     <End Role="Address" Type="DbModel.Store.Address" Multiplicity="1" />
     <End Role="Order" Type="DbModel.Store.Order" Multiplicity="*" />
@@ -1843,20 +1414,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_ProductAttributeCombination_dbo_Product_ProductId">
-    <End Role="Product" Type="DbModel.Store.Product" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ProductAttributeCombination" Type="DbModel.Store.ProductAttributeCombination" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ProductAttributeCombination">
-        <PropertyRef Name="ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_ProductAttributeValue_dbo_Product_ProductAttribute_Mapping_ProductAttributeMappingId">
     <End Role="Product_ProductAttribute_Mapping" Type="DbModel.Store.Product_ProductAttribute_Mapping" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -1941,20 +1498,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId">
-    <End Role="EmailAccount" Type="DbModel.Store.EmailAccount" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="QueuedEmail" Type="DbModel.Store.QueuedEmail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="EmailAccount">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="QueuedEmail">
-        <PropertyRef Name="EmailAccountId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_RecurringPayment_dbo_Order_InitialOrderId">
     <End Role="Order" Type="DbModel.Store.Order" Multiplicity="1" />
     <End Role="RecurringPayment" Type="DbModel.Store.RecurringPayment" Multiplicity="*" />
@@ -1978,32 +1521,6 @@
       </Principal>
       <Dependent Role="ReturnRequest">
         <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Store.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="RewardPointsHistory" Type="DbModel.Store.RewardPointsHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="RewardPointsHistory">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id">
-    <End Role="Order" Type="DbModel.Store.Order" Multiplicity="0..1" />
-    <End Role="RewardPointsHistory" Type="DbModel.Store.RewardPointsHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Order">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="RewardPointsHistory">
-        <PropertyRef Name="UsedWithOrder_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2119,47 +1636,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId">
-    <End Role="CustomerRole" Type="DbModel.Store.CustomerRole" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="TierPrice" Type="DbModel.Store.TierPrice" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CustomerRole">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TierPrice">
-        <PropertyRef Name="CustomerRoleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_TierPrice_dbo_Product_ProductId">
-    <End Role="Product" Type="DbModel.Store.Product" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="TierPrice" Type="DbModel.Store.TierPrice" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TierPrice">
-        <PropertyRef Name="ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema>
+  </Schema>
 </edmx:StorageModels>
 <!-- CSDL content -->
 <edmx:ConceptualModels>
 <Schema Namespace="DbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="DbEntities" p1:LazyLoadingEnabled="true">
-    <EntitySet Name="ActivityLog" EntityType="DbModel.ActivityLog" />
     <EntitySet Name="Address" EntityType="DbModel.Address" />
     <EntitySet Name="BackInStockSubscription" EntityType="DbModel.BackInStockSubscription" />
     <EntitySet Name="Category" EntityType="DbModel.Category" />
-    <EntitySet Name="CategoryTemplate" EntityType="DbModel.CategoryTemplate" />
-    <EntitySet Name="CheckoutAttribute" EntityType="DbModel.CheckoutAttribute" />
-    <EntitySet Name="CheckoutAttributeValue" EntityType="DbModel.CheckoutAttributeValue" />
     <EntitySet Name="Country" EntityType="DbModel.Country" />
     <EntitySet Name="Customer" EntityType="DbModel.Customer" />
     <EntitySet Name="CustomerRole" EntityType="DbModel.CustomerRole" />
@@ -2167,15 +1652,7 @@
     <EntitySet Name="Discount" EntityType="DbModel.Discount" />
     <EntitySet Name="DiscountRequirement" EntityType="DbModel.DiscountRequirement" />
     <EntitySet Name="DiscountUsageHistory" EntityType="DbModel.DiscountUsageHistory" />
-    <EntitySet Name="EmailAccount" EntityType="DbModel.EmailAccount" />
-    <EntitySet Name="ExternalAuthenticationRecord" EntityType="DbModel.ExternalAuthenticationRecord" />
-    <EntitySet Name="GiftCard" EntityType="DbModel.GiftCard" />
-    <EntitySet Name="GiftCardUsageHistory" EntityType="DbModel.GiftCardUsageHistory" />
     <EntitySet Name="Manufacturer" EntityType="DbModel.Manufacturer" />
-    <EntitySet Name="ManufacturerTemplate" EntityType="DbModel.ManufacturerTemplate" />
-    <EntitySet Name="MessageTemplate" EntityType="DbModel.MessageTemplate" />
-    <EntitySet Name="News" EntityType="DbModel.News" />
-    <EntitySet Name="NewsComment" EntityType="DbModel.NewsComment" />
     <EntitySet Name="Order" EntityType="DbModel.Order" />
     <EntitySet Name="OrderItem" EntityType="DbModel.OrderItem" />
     <EntitySet Name="Picture" EntityType="DbModel.Picture" />
@@ -2186,17 +1663,14 @@
     <EntitySet Name="Product_ProductAttribute_Mapping" EntityType="DbModel.Product_ProductAttribute_Mapping" />
     <EntitySet Name="Product_SpecificationAttribute_Mapping" EntityType="DbModel.Product_SpecificationAttribute_Mapping" />
     <EntitySet Name="ProductAttribute" EntityType="DbModel.ProductAttribute" />
-    <EntitySet Name="ProductAttributeCombination" EntityType="DbModel.ProductAttributeCombination" />
     <EntitySet Name="ProductAttributeValue" EntityType="DbModel.ProductAttributeValue" />
     <EntitySet Name="ProductReview" EntityType="DbModel.ProductReview" />
     <EntitySet Name="ProductReviewHelpfulness" EntityType="DbModel.ProductReviewHelpfulness" />
     <EntitySet Name="ProductWarehouseInventory" EntityType="DbModel.ProductWarehouseInventory" />
-    <EntitySet Name="QueuedEmail" EntityType="DbModel.QueuedEmail" />
     <EntitySet Name="RecurringPayment" EntityType="DbModel.RecurringPayment" />
     <EntitySet Name="ReturnRequest" EntityType="DbModel.ReturnRequest" />
     <EntitySet Name="ReturnRequestAction" EntityType="DbModel.ReturnRequestAction" />
     <EntitySet Name="ReturnRequestReason" EntityType="DbModel.ReturnRequestReason" />
-    <EntitySet Name="RewardPointsHistory" EntityType="DbModel.RewardPointsHistory" />
     <EntitySet Name="Shipment" EntityType="DbModel.Shipment" />
     <EntitySet Name="ShipmentItem" EntityType="DbModel.ShipmentItem" />
     <EntitySet Name="ShippingMethod" EntityType="DbModel.ShippingMethod" />
@@ -2204,15 +1678,8 @@
     <EntitySet Name="StateProvince" EntityType="DbModel.StateProvince" />
     <EntitySet Name="Store" EntityType="DbModel.Store" />
     <EntitySet Name="StoreMapping" EntityType="DbModel.StoreMapping" />
-    <EntitySet Name="TaxCategory" EntityType="DbModel.TaxCategory" />
-    <EntitySet Name="TaxRate" EntityType="DbModel.TaxRate" />
-    <EntitySet Name="TierPrice" EntityType="DbModel.TierPrice" />
     <EntitySet Name="Vendor" EntityType="DbModel.Vendor" />
     <EntitySet Name="Warehouse" EntityType="DbModel.Warehouse" />
-    <AssociationSet Name="FK_dbo_ActivityLog_dbo_Customer_CustomerId" Association="DbModel.FK_dbo_ActivityLog_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="ActivityLog" EntitySet="ActivityLog" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_Address_dbo_Country_CountryId" Association="DbModel.FK_dbo_Address_dbo_Country_CountryId">
       <End Role="Country" EntitySet="Country" />
       <End Role="Address" EntitySet="Address" />
@@ -2249,21 +1716,9 @@
       <End Role="Category" EntitySet="Category" />
       <End Role="Product_Category_Mapping" EntitySet="Product_Category_Mapping" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId" Association="DbModel.FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId">
-      <End Role="CheckoutAttribute" EntitySet="CheckoutAttribute" />
-      <End Role="CheckoutAttributeValue" EntitySet="CheckoutAttributeValue" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_StateProvince_dbo_Country_CountryId" Association="DbModel.FK_dbo_StateProvince_dbo_Country_CountryId">
       <End Role="Country" EntitySet="Country" />
       <End Role="StateProvince" EntitySet="StateProvince" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId" Association="DbModel.FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="ExternalAuthenticationRecord" EntitySet="ExternalAuthenticationRecord" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_NewsComment_dbo_Customer_CustomerId" Association="DbModel.FK_dbo_NewsComment_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="NewsComment" EntitySet="NewsComment" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_Order_dbo_Customer_CustomerId" Association="DbModel.FK_dbo_Order_dbo_Customer_CustomerId">
       <End Role="Customer" EntitySet="Customer" />
@@ -2277,17 +1732,9 @@
       <End Role="Customer" EntitySet="Customer" />
       <End Role="ReturnRequest" EntitySet="ReturnRequest" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId" Association="DbModel.FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="RewardPointsHistory" EntitySet="RewardPointsHistory" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_ShoppingCartItem_dbo_Customer_CustomerId" Association="DbModel.FK_dbo_ShoppingCartItem_dbo_Customer_CustomerId">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="ShoppingCartItem" EntitySet="ShoppingCartItem" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId" Association="DbModel.FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId">
-      <End Role="CustomerRole" EntitySet="CustomerRole" />
-      <End Role="TierPrice" EntitySet="TierPrice" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_DiscountRequirement_dbo_Discount_DiscountId" Association="DbModel.FK_dbo_DiscountRequirement_dbo_Discount_DiscountId">
       <End Role="Discount" EntitySet="Discount" />
@@ -2301,29 +1748,9 @@
       <End Role="Order" EntitySet="Order" />
       <End Role="DiscountUsageHistory" EntitySet="DiscountUsageHistory" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId" Association="DbModel.FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId">
-      <End Role="EmailAccount" EntitySet="EmailAccount" />
-      <End Role="QueuedEmail" EntitySet="QueuedEmail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId" Association="DbModel.FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId">
-      <End Role="OrderItem" EntitySet="OrderItem" />
-      <End Role="GiftCard" EntitySet="GiftCard" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId" Association="DbModel.FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId">
-      <End Role="GiftCard" EntitySet="GiftCard" />
-      <End Role="GiftCardUsageHistory" EntitySet="GiftCardUsageHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId" Association="DbModel.FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId">
-      <End Role="Order" EntitySet="Order" />
-      <End Role="GiftCardUsageHistory" EntitySet="GiftCardUsageHistory" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_Product_Manufacturer_Mapping_dbo_Manufacturer_ManufacturerId" Association="DbModel.FK_dbo_Product_Manufacturer_Mapping_dbo_Manufacturer_ManufacturerId">
       <End Role="Manufacturer" EntitySet="Manufacturer" />
       <End Role="Product_Manufacturer_Mapping" EntitySet="Product_Manufacturer_Mapping" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_NewsComment_dbo_News_NewsItemId" Association="DbModel.FK_dbo_NewsComment_dbo_News_NewsItemId">
-      <End Role="News" EntitySet="News" />
-      <End Role="NewsComment" EntitySet="NewsComment" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_OrderItem_dbo_Order_OrderId" Association="DbModel.FK_dbo_OrderItem_dbo_Order_OrderId">
       <End Role="Order" EntitySet="Order" />
@@ -2332,10 +1759,6 @@
     <AssociationSet Name="FK_dbo_RecurringPayment_dbo_Order_InitialOrderId" Association="DbModel.FK_dbo_RecurringPayment_dbo_Order_InitialOrderId">
       <End Role="Order" EntitySet="Order" />
       <End Role="RecurringPayment" EntitySet="RecurringPayment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id" Association="DbModel.FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id">
-      <End Role="Order" EntitySet="Order" />
-      <End Role="RewardPointsHistory" EntitySet="RewardPointsHistory" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_Shipment_dbo_Order_OrderId" Association="DbModel.FK_dbo_Shipment_dbo_Order_OrderId">
       <End Role="Order" EntitySet="Order" />
@@ -2369,10 +1792,6 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="Product_SpecificationAttribute_Mapping" EntitySet="Product_SpecificationAttribute_Mapping" />
     </AssociationSet>
-    <AssociationSet Name="FK_dbo_ProductAttributeCombination_dbo_Product_ProductId" Association="DbModel.FK_dbo_ProductAttributeCombination_dbo_Product_ProductId">
-      <End Role="Product" EntitySet="Product" />
-      <End Role="ProductAttributeCombination" EntitySet="ProductAttributeCombination" />
-    </AssociationSet>
     <AssociationSet Name="FK_dbo_ProductReview_dbo_Product_ProductId" Association="DbModel.FK_dbo_ProductReview_dbo_Product_ProductId">
       <End Role="Product" EntitySet="Product" />
       <End Role="ProductReview" EntitySet="ProductReview" />
@@ -2384,10 +1803,6 @@
     <AssociationSet Name="FK_dbo_ShoppingCartItem_dbo_Product_ProductId" Association="DbModel.FK_dbo_ShoppingCartItem_dbo_Product_ProductId">
       <End Role="Product" EntitySet="Product" />
       <End Role="ShoppingCartItem" EntitySet="ShoppingCartItem" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_TierPrice_dbo_Product_ProductId" Association="DbModel.FK_dbo_TierPrice_dbo_Product_ProductId">
-      <End Role="Product" EntitySet="Product" />
-      <End Role="TierPrice" EntitySet="TierPrice" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_Product_ProductAttribute_Mapping_dbo_ProductAttribute_ProductAttributeId" Association="DbModel.FK_dbo_Product_ProductAttribute_Mapping_dbo_ProductAttribute_ProductAttributeId">
       <End Role="ProductAttribute" EntitySet="ProductAttribute" />
@@ -2438,17 +1853,6 @@
       <End Role="ShippingMethod" EntitySet="ShippingMethod" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="ActivityLog">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="ActivityLogTypeId" Type="Int32" Nullable="false" />
-    <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="Comment" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_ActivityLog_dbo_Customer_CustomerId" FromRole="ActivityLog" ToRole="Customer" />
-  </EntityType>
   <EntityType Name="Address">
     <Key>
       <PropertyRef Name="Id" />
@@ -2462,11 +1866,7 @@
     <Property Name="StateProvinceId" Type="Int32" />
     <Property Name="City" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="Address1" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="Address2" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ZipPostalCode" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="PhoneNumber" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="FaxNumber" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CustomAttributes" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Country" Relationship="DbModel.FK_dbo_Address_dbo_Country_CountryId" FromRole="Address" ToRole="Country" />
     <NavigationProperty Name="StateProvince" Relationship="DbModel.FK_dbo_Address_dbo_StateProvince_StateProvinceId" FromRole="Address" ToRole="StateProvince" />
@@ -2495,71 +1895,15 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CategoryTemplateId" Type="Int32" Nullable="false" />
-    <Property Name="MetaKeywords" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="MetaDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="MetaTitle" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="ParentCategoryId" Type="Int32" Nullable="false" />
     <Property Name="PictureId" Type="Int32" Nullable="false" />
-    <Property Name="PageSize" Type="Int32" Nullable="false" />
-    <Property Name="AllowCustomersToSelectPageSize" Type="Boolean" Nullable="false" />
-    <Property Name="PageSizeOptions" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
     <Property Name="PriceRanges" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ShowOnHomePage" Type="Boolean" Nullable="false" />
-    <Property Name="IncludeInTopMenu" Type="Boolean" Nullable="false" />
-    <Property Name="SubjectToAcl" Type="Boolean" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
     <Property Name="Published" Type="Boolean" Nullable="false" />
     <Property Name="Deleted" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <Property Name="UpdatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Product_Category_Mapping" Relationship="DbModel.FK_dbo_Product_Category_Mapping_dbo_Category_CategoryId" FromRole="Category" ToRole="Product_Category_Mapping" />
     <NavigationProperty Name="Discount" Relationship="DbModel.Discount_AppliedToCategories" FromRole="Category" ToRole="Discount" />
-  </EntityType>
-  <EntityType Name="CategoryTemplate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ViewPath" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CheckoutAttribute">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="TextPrompt" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="IsRequired" Type="Boolean" Nullable="false" />
-    <Property Name="ShippableProductRequired" Type="Boolean" Nullable="false" />
-    <Property Name="IsTaxExempt" Type="Boolean" Nullable="false" />
-    <Property Name="TaxCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="AttributeControlTypeId" Type="Int32" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
-    <Property Name="ValidationMinLength" Type="Int32" />
-    <Property Name="ValidationMaxLength" Type="Int32" />
-    <Property Name="ValidationFileAllowedExtensions" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ValidationFileMaximumSize" Type="Int32" />
-    <Property Name="DefaultValue" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="CheckoutAttributeValue" Relationship="DbModel.FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId" FromRole="CheckoutAttribute" ToRole="CheckoutAttributeValue" />
-  </EntityType>
-  <EntityType Name="CheckoutAttributeValue">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="CheckoutAttributeId" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ColorSquaresRgb" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-    <Property Name="PriceAdjustment" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="WeightAdjustment" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="IsPreSelected" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CheckoutAttribute" Relationship="DbModel.FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId" FromRole="CheckoutAttributeValue" ToRole="CheckoutAttribute" />
   </EntityType>
   <EntityType Name="Country">
     <Key>
@@ -2569,13 +1913,7 @@
     <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
     <Property Name="AllowsBilling" Type="Boolean" Nullable="false" />
     <Property Name="AllowsShipping" Type="Boolean" Nullable="false" />
-    <Property Name="TwoLetterIsoCode" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
-    <Property Name="ThreeLetterIsoCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
-    <Property Name="NumericIsoCode" Type="Int32" Nullable="false" />
-    <Property Name="SubjectToVat" Type="Boolean" Nullable="false" />
     <Property Name="Published" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Address" Relationship="DbModel.FK_dbo_Address_dbo_Country_CountryId" FromRole="Country" ToRole="Address" />
     <NavigationProperty Name="StateProvince" Relationship="DbModel.FK_dbo_StateProvince_dbo_Country_CountryId" FromRole="Country" ToRole="StateProvince" />
     <NavigationProperty Name="ShippingMethod" Relationship="DbModel.ShippingMethodRestrictions" FromRole="Country" ToRole="ShippingMethod" />
@@ -2589,33 +1927,24 @@
     <Property Name="Username" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
     <Property Name="Email" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
     <Property Name="Password" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="PasswordFormatId" Type="Int32" Nullable="false" />
     <Property Name="PasswordSalt" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AdminComment" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="IsTaxExempt" Type="Boolean" Nullable="false" />
-    <Property Name="AffiliateId" Type="Int32" Nullable="false" />
     <Property Name="VendorId" Type="Int32" Nullable="false" />
     <Property Name="HasShoppingCartItems" Type="Boolean" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <Property Name="Deleted" Type="Boolean" Nullable="false" />
     <Property Name="IsSystemAccount" Type="Boolean" Nullable="false" />
     <Property Name="SystemName" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="LastIpAddress" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <Property Name="LastLoginDateUtc" Type="DateTime" />
     <Property Name="LastActivityDateUtc" Type="DateTime" Nullable="false" />
     <Property Name="BillingAddress_Id" Type="Int32" />
     <Property Name="ShippingAddress_Id" Type="Int32" />
-    <NavigationProperty Name="ActivityLog" Relationship="DbModel.FK_dbo_ActivityLog_dbo_Customer_CustomerId" FromRole="Customer" ToRole="ActivityLog" />
     <NavigationProperty Name="Address" Relationship="DbModel.FK_dbo_Customer_dbo_Address_BillingAddress_Id" FromRole="Customer" ToRole="Address" />
     <NavigationProperty Name="Address1" Relationship="DbModel.FK_dbo_Customer_dbo_Address_ShippingAddress_Id" FromRole="Customer" ToRole="Address" />
     <NavigationProperty Name="BackInStockSubscription" Relationship="DbModel.FK_dbo_BackInStockSubscription_dbo_Customer_CustomerId" FromRole="Customer" ToRole="BackInStockSubscription" />
-    <NavigationProperty Name="ExternalAuthenticationRecord" Relationship="DbModel.FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId" FromRole="Customer" ToRole="ExternalAuthenticationRecord" />
-    <NavigationProperty Name="NewsComment" Relationship="DbModel.FK_dbo_NewsComment_dbo_Customer_CustomerId" FromRole="Customer" ToRole="NewsComment" />
     <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_Order_dbo_Customer_CustomerId" FromRole="Customer" ToRole="Order" />
     <NavigationProperty Name="ProductReview" Relationship="DbModel.FK_dbo_ProductReview_dbo_Customer_CustomerId" FromRole="Customer" ToRole="ProductReview" />
     <NavigationProperty Name="ReturnRequest" Relationship="DbModel.FK_dbo_ReturnRequest_dbo_Customer_CustomerId" FromRole="Customer" ToRole="ReturnRequest" />
-    <NavigationProperty Name="RewardPointsHistory" Relationship="DbModel.FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId" FromRole="Customer" ToRole="RewardPointsHistory" />
     <NavigationProperty Name="ShoppingCartItem" Relationship="DbModel.FK_dbo_ShoppingCartItem_dbo_Customer_CustomerId" FromRole="Customer" ToRole="ShoppingCartItem" />
     <NavigationProperty Name="CustomerRole" Relationship="DbModel.Customer_CustomerRole_Mapping" FromRole="Customer" ToRole="CustomerRole" />
     <NavigationProperty Name="Address2" Relationship="DbModel.CustomerAddresses" FromRole="Customer" ToRole="Address" />
@@ -2627,12 +1956,10 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="FreeShipping" Type="Boolean" Nullable="false" />
-    <Property Name="TaxExempt" Type="Boolean" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <Property Name="IsSystemRole" Type="Boolean" Nullable="false" />
     <Property Name="SystemName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="PurchasedWithProductId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TierPrice" Relationship="DbModel.FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId" FromRole="CustomerRole" ToRole="TierPrice" />
     <NavigationProperty Name="Customer" Relationship="DbModel.Customer_CustomerRole_Mapping" FromRole="CustomerRole" ToRole="Customer" />
   </EntityType>
   <EntityType Name="DeliveryDate">
@@ -2661,7 +1988,6 @@
     <Property Name="DiscountLimitationId" Type="Int32" Nullable="false" />
     <Property Name="LimitationTimes" Type="Int32" Nullable="false" />
     <Property Name="MaximumDiscountedQuantity" Type="Int32" />
-    <Property Name="AppliedToSubCategories" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="DiscountRequirement" Relationship="DbModel.FK_dbo_DiscountRequirement_dbo_Discount_DiscountId" FromRole="Discount" ToRole="DiscountRequirement" />
     <NavigationProperty Name="DiscountUsageHistory" Relationship="DbModel.FK_dbo_DiscountUsageHistory_dbo_Discount_DiscountId" FromRole="Discount" ToRole="DiscountUsageHistory" />
     <NavigationProperty Name="Category" Relationship="DbModel.Discount_AppliedToCategories" FromRole="Discount" ToRole="Category" />
@@ -2688,67 +2014,6 @@
     <NavigationProperty Name="Discount" Relationship="DbModel.FK_dbo_DiscountUsageHistory_dbo_Discount_DiscountId" FromRole="DiscountUsageHistory" ToRole="Discount" />
     <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_DiscountUsageHistory_dbo_Order_OrderId" FromRole="DiscountUsageHistory" ToRole="Order" />
   </EntityType>
-  <EntityType Name="EmailAccount">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Email" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="DisplayName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="Host" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="Port" Type="Int32" Nullable="false" />
-    <Property Name="Username" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="Password" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="EnableSsl" Type="Boolean" Nullable="false" />
-    <Property Name="UseDefaultCredentials" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="QueuedEmail" Relationship="DbModel.FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId" FromRole="EmailAccount" ToRole="QueuedEmail" />
-  </EntityType>
-  <EntityType Name="ExternalAuthenticationRecord">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="Email" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ExternalIdentifier" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ExternalDisplayIdentifier" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="OAuthToken" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="OAuthAccessToken" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ProviderSystemName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId" FromRole="ExternalAuthenticationRecord" ToRole="Customer" />
-  </EntityType>
-  <EntityType Name="GiftCard">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="PurchasedWithOrderItemId" Type="Int32" />
-    <Property Name="GiftCardTypeId" Type="Int32" Nullable="false" />
-    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="IsGiftCardActivated" Type="Boolean" Nullable="false" />
-    <Property Name="GiftCardCouponCode" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="RecipientName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="RecipientEmail" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="SenderName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="SenderEmail" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="Message" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="IsRecipientNotified" Type="Boolean" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="OrderItem" Relationship="DbModel.FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId" FromRole="GiftCard" ToRole="OrderItem" />
-    <NavigationProperty Name="GiftCardUsageHistory" Relationship="DbModel.FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId" FromRole="GiftCard" ToRole="GiftCardUsageHistory" />
-  </EntityType>
-  <EntityType Name="GiftCardUsageHistory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="GiftCardId" Type="Int32" Nullable="false" />
-    <Property Name="UsedWithOrderId" Type="Int32" Nullable="false" />
-    <Property Name="UsedValue" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="GiftCard" Relationship="DbModel.FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId" FromRole="GiftCardUsageHistory" ToRole="GiftCard" />
-    <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId" FromRole="GiftCardUsageHistory" ToRole="Order" />
-  </EntityType>
   <EntityType Name="Manufacturer">
     <Key>
       <PropertyRef Name="Id" />
@@ -2756,81 +2021,11 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ManufacturerTemplateId" Type="Int32" Nullable="false" />
-    <Property Name="MetaKeywords" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="MetaDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="MetaTitle" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="PictureId" Type="Int32" Nullable="false" />
-    <Property Name="PageSize" Type="Int32" Nullable="false" />
-    <Property Name="AllowCustomersToSelectPageSize" Type="Boolean" Nullable="false" />
-    <Property Name="PageSizeOptions" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
     <Property Name="PriceRanges" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="SubjectToAcl" Type="Boolean" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
-    <Property Name="Published" Type="Boolean" Nullable="false" />
     <Property Name="Deleted" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <Property Name="UpdatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Product_Manufacturer_Mapping" Relationship="DbModel.FK_dbo_Product_Manufacturer_Mapping_dbo_Manufacturer_ManufacturerId" FromRole="Manufacturer" ToRole="Product_Manufacturer_Mapping" />
     <NavigationProperty Name="Discount" Relationship="DbModel.Discount_AppliedToManufacturers" FromRole="Manufacturer" ToRole="Discount" />
-  </EntityType>
-  <EntityType Name="ManufacturerTemplate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ViewPath" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="MessageTemplate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
-    <Property Name="BccEmailAddresses" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
-    <Property Name="Subject" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-    <Property Name="Body" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="IsActive" Type="Boolean" Nullable="false" />
-    <Property Name="AttachedDownloadId" Type="Int32" Nullable="false" />
-    <Property Name="EmailAccountId" Type="Int32" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
-  </EntityType>
-  <EntityType Name="News">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="LanguageId" Type="Int32" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="Short" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="Full" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="Published" Type="Boolean" Nullable="false" />
-    <Property Name="StartDateUtc" Type="DateTime" />
-    <Property Name="EndDateUtc" Type="DateTime" />
-    <Property Name="AllowComments" Type="Boolean" Nullable="false" />
-    <Property Name="CommentCount" Type="Int32" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
-    <Property Name="MetaKeywords" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="MetaDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="MetaTitle" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="NewsComment" Relationship="DbModel.FK_dbo_NewsComment_dbo_News_NewsItemId" FromRole="News" ToRole="NewsComment" />
-  </EntityType>
-  <EntityType Name="NewsComment">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="CommentTitle" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CommentText" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="NewsItemId" Type="Int32" Nullable="false" />
-    <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_NewsComment_dbo_Customer_CustomerId" FromRole="NewsComment" ToRole="Customer" />
-    <NavigationProperty Name="News" Relationship="DbModel.FK_dbo_NewsComment_dbo_News_NewsItemId" FromRole="NewsComment" ToRole="News" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -2842,62 +2037,33 @@
     <Property Name="CustomerId" Type="Int32" Nullable="false" />
     <Property Name="BillingAddressId" Type="Int32" Nullable="false" />
     <Property Name="ShippingAddressId" Type="Int32" />
-    <Property Name="PickUpInStore" Type="Boolean" Nullable="false" />
     <Property Name="OrderStatusId" Type="Int32" Nullable="false" />
     <Property Name="ShippingStatusId" Type="Int32" Nullable="false" />
     <Property Name="PaymentStatusId" Type="Int32" Nullable="false" />
     <Property Name="PaymentMethodSystemName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CustomerCurrencyCode" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CurrencyRate" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
-    <Property Name="CustomerTaxDisplayTypeId" Type="Int32" Nullable="false" />
-    <Property Name="VatNumber" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="OrderSubtotalInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="OrderSubtotalExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="OrderSubTotalDiscountInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="OrderSubTotalDiscountExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="OrderShippingInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="OrderShippingExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="PaymentMethodAdditionalFeeInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="PaymentMethodAdditionalFeeExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="TaxRates" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="OrderTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="OrderDiscount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="OrderTotal" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="RefundedAmount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="RewardPointsWereAdded" Type="Boolean" Nullable="false" />
-    <Property Name="CheckoutAttributeDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CheckoutAttributesXml" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CustomerLanguageId" Type="Int32" Nullable="false" />
-    <Property Name="AffiliateId" Type="Int32" Nullable="false" />
-    <Property Name="CustomerIp" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="AllowStoringCreditCardNumber" Type="Boolean" Nullable="false" />
     <Property Name="CardType" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CardName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CardNumber" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="MaskedCreditCardNumber" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CardCvv2" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CardExpirationMonth" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CardExpirationYear" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AuthorizationTransactionId" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AuthorizationTransactionCode" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AuthorizationTransactionResult" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CaptureTransactionId" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CaptureTransactionResult" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="SubscriptionTransactionId" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="PaidDateUtc" Type="DateTime" />
     <Property Name="ShippingMethod" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ShippingRateComputationMethodSystemName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CustomValuesXml" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="Deleted" Type="Boolean" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Address" Relationship="DbModel.FK_dbo_Order_dbo_Address_BillingAddressId" FromRole="Order" ToRole="Address" />
     <NavigationProperty Name="Address1" Relationship="DbModel.FK_dbo_Order_dbo_Address_ShippingAddressId" FromRole="Order" ToRole="Address" />
     <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_Order_dbo_Customer_CustomerId" FromRole="Order" ToRole="Customer" />
     <NavigationProperty Name="DiscountUsageHistory" Relationship="DbModel.FK_dbo_DiscountUsageHistory_dbo_Order_OrderId" FromRole="Order" ToRole="DiscountUsageHistory" />
-    <NavigationProperty Name="GiftCardUsageHistory" Relationship="DbModel.FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId" FromRole="Order" ToRole="GiftCardUsageHistory" />
     <NavigationProperty Name="OrderItem" Relationship="DbModel.FK_dbo_OrderItem_dbo_Order_OrderId" FromRole="Order" ToRole="OrderItem" />
     <NavigationProperty Name="RecurringPayment" Relationship="DbModel.FK_dbo_RecurringPayment_dbo_Order_InitialOrderId" FromRole="Order" ToRole="RecurringPayment" />
-    <NavigationProperty Name="RewardPointsHistory" Relationship="DbModel.FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id" FromRole="Order" ToRole="RewardPointsHistory" />
     <NavigationProperty Name="Shipment" Relationship="DbModel.FK_dbo_Shipment_dbo_Order_OrderId" FromRole="Order" ToRole="Shipment" />
   </EntityType>
   <EntityType Name="OrderItem">
@@ -2909,22 +2075,9 @@
     <Property Name="OrderId" Type="Int32" Nullable="false" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="UnitPriceInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="UnitPriceExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="PriceInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="PriceExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="DiscountAmountInclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="DiscountAmountExclTax" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="OriginalProductCost" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="AttributeDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AttributesXml" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
-    <Property Name="IsDownloadActivated" Type="Boolean" Nullable="false" />
-    <Property Name="LicenseDownloadId" Type="Int32" />
     <Property Name="ItemWeight" Type="Decimal" Precision="18" Scale="4" />
-    <Property Name="RentalStartDateUtc" Type="DateTime" />
-    <Property Name="RentalEndDateUtc" Type="DateTime" />
-    <NavigationProperty Name="GiftCard" Relationship="DbModel.FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId" FromRole="OrderItem" ToRole="GiftCard" />
     <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_OrderItem_dbo_Order_OrderId" FromRole="OrderItem" ToRole="Order" />
     <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_OrderItem_dbo_Product_ProductId" FromRole="OrderItem" ToRole="Product" />
   </EntityType>
@@ -2933,10 +2086,6 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="PictureBinary" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="MimeType" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
-    <Property Name="SeoFilename" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
-    <Property Name="AltAttribute" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="TitleAttribute" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="IsNew" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Product_Picture_Mapping" Relationship="DbModel.FK_dbo_Product_Picture_Mapping_dbo_Picture_PictureId" FromRole="Picture" ToRole="Product_Picture_Mapping" />
@@ -2947,109 +2096,21 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
-    <Property Name="ParentGroupedProductId" Type="Int32" Nullable="false" />
-    <Property Name="VisibleIndividually" Type="Boolean" Nullable="false" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="ShortDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="FullDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AdminComment" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ProductTemplateId" Type="Int32" Nullable="false" />
     <Property Name="VendorId" Type="Int32" Nullable="false" />
-    <Property Name="ShowOnHomePage" Type="Boolean" Nullable="false" />
-    <Property Name="MetaKeywords" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="MetaDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="MetaTitle" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="AllowCustomerReviews" Type="Boolean" Nullable="false" />
-    <Property Name="ApprovedRatingSum" Type="Int32" Nullable="false" />
-    <Property Name="NotApprovedRatingSum" Type="Int32" Nullable="false" />
-    <Property Name="ApprovedTotalReviews" Type="Int32" Nullable="false" />
-    <Property Name="NotApprovedTotalReviews" Type="Int32" Nullable="false" />
-    <Property Name="SubjectToAcl" Type="Boolean" Nullable="false" />
-    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
     <Property Name="Sku" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ManufacturerPartNumber" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="Gtin" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="IsGiftCard" Type="Boolean" Nullable="false" />
-    <Property Name="GiftCardTypeId" Type="Int32" Nullable="false" />
-    <Property Name="OverriddenGiftCardAmount" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="RequireOtherProducts" Type="Boolean" Nullable="false" />
-    <Property Name="RequiredProductIds" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-    <Property Name="AutomaticallyAddRequiredProducts" Type="Boolean" Nullable="false" />
-    <Property Name="IsDownload" Type="Boolean" Nullable="false" />
-    <Property Name="DownloadId" Type="Int32" Nullable="false" />
-    <Property Name="UnlimitedDownloads" Type="Boolean" Nullable="false" />
-    <Property Name="MaxNumberOfDownloads" Type="Int32" Nullable="false" />
-    <Property Name="DownloadExpirationDays" Type="Int32" />
-    <Property Name="DownloadActivationTypeId" Type="Int32" Nullable="false" />
-    <Property Name="HasSampleDownload" Type="Boolean" Nullable="false" />
-    <Property Name="SampleDownloadId" Type="Int32" Nullable="false" />
-    <Property Name="HasUserAgreement" Type="Boolean" Nullable="false" />
-    <Property Name="UserAgreementText" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="IsRecurring" Type="Boolean" Nullable="false" />
-    <Property Name="RecurringCycleLength" Type="Int32" Nullable="false" />
-    <Property Name="RecurringCyclePeriodId" Type="Int32" Nullable="false" />
     <Property Name="RecurringTotalCycles" Type="Int32" Nullable="false" />
-    <Property Name="IsRental" Type="Boolean" Nullable="false" />
-    <Property Name="RentalPriceLength" Type="Int32" Nullable="false" />
-    <Property Name="RentalPricePeriodId" Type="Int32" Nullable="false" />
     <Property Name="IsShipEnabled" Type="Boolean" Nullable="false" />
     <Property Name="IsFreeShipping" Type="Boolean" Nullable="false" />
-    <Property Name="ShipSeparately" Type="Boolean" Nullable="false" />
     <Property Name="AdditionalShippingCharge" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="DeliveryDateId" Type="Int32" Nullable="false" />
-    <Property Name="IsTaxExempt" Type="Boolean" Nullable="false" />
-    <Property Name="TaxCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="IsTelecommunicationsOrBroadcastingOrElectronicServices" Type="Boolean" Nullable="false" />
-    <Property Name="ManageInventoryMethodId" Type="Int32" Nullable="false" />
-    <Property Name="UseMultipleWarehouses" Type="Boolean" Nullable="false" />
     <Property Name="WarehouseId" Type="Int32" Nullable="false" />
     <Property Name="StockQuantity" Type="Int32" Nullable="false" />
-    <Property Name="DisplayStockAvailability" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayStockQuantity" Type="Boolean" Nullable="false" />
-    <Property Name="MinStockQuantity" Type="Int32" Nullable="false" />
-    <Property Name="LowStockActivityId" Type="Int32" Nullable="false" />
-    <Property Name="NotifyAdminForQuantityBelow" Type="Int32" Nullable="false" />
-    <Property Name="BackorderModeId" Type="Int32" Nullable="false" />
-    <Property Name="AllowBackInStockSubscriptions" Type="Boolean" Nullable="false" />
-    <Property Name="OrderMinimumQuantity" Type="Int32" Nullable="false" />
-    <Property Name="OrderMaximumQuantity" Type="Int32" Nullable="false" />
-    <Property Name="AllowedQuantities" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-    <Property Name="AllowAddingOnlyExistingAttributeCombinations" Type="Boolean" Nullable="false" />
-    <Property Name="DisableBuyButton" Type="Boolean" Nullable="false" />
-    <Property Name="DisableWishlistButton" Type="Boolean" Nullable="false" />
-    <Property Name="AvailableForPreOrder" Type="Boolean" Nullable="false" />
-    <Property Name="PreOrderAvailabilityStartDateTimeUtc" Type="DateTime" />
-    <Property Name="CallForPrice" Type="Boolean" Nullable="false" />
     <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="OldPrice" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="ProductCost" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="SpecialPrice" Type="Decimal" Precision="18" Scale="4" />
-    <Property Name="SpecialPriceStartDateTimeUtc" Type="DateTime" />
-    <Property Name="SpecialPriceEndDateTimeUtc" Type="DateTime" />
-    <Property Name="CustomerEntersPrice" Type="Boolean" Nullable="false" />
-    <Property Name="MinimumCustomerEnteredPrice" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="MaximumCustomerEnteredPrice" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="BasepriceEnabled" Type="Boolean" Nullable="false" />
-    <Property Name="BasepriceAmount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="BasepriceUnitId" Type="Int32" Nullable="false" />
-    <Property Name="BasepriceBaseAmount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="BasepriceBaseUnitId" Type="Int32" Nullable="false" />
-    <Property Name="MarkAsNew" Type="Boolean" Nullable="false" />
-    <Property Name="MarkAsNewStartDateTimeUtc" Type="DateTime" />
-    <Property Name="MarkAsNewEndDateTimeUtc" Type="DateTime" />
-    <Property Name="HasTierPrices" Type="Boolean" Nullable="false" />
-    <Property Name="HasDiscountsApplied" Type="Boolean" Nullable="false" />
-    <Property Name="Weight" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="Length" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="Width" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="Height" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="AvailableStartDateTimeUtc" Type="DateTime" />
-    <Property Name="AvailableEndDateTimeUtc" Type="DateTime" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <Property Name="Published" Type="Boolean" Nullable="false" />
     <Property Name="Deleted" Type="Boolean" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <Property Name="UpdatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="BackInStockSubscription" Relationship="DbModel.FK_dbo_BackInStockSubscription_dbo_Product_ProductId" FromRole="Product" ToRole="BackInStockSubscription" />
     <NavigationProperty Name="OrderItem" Relationship="DbModel.FK_dbo_OrderItem_dbo_Product_ProductId" FromRole="Product" ToRole="OrderItem" />
     <NavigationProperty Name="Product_Category_Mapping" Relationship="DbModel.FK_dbo_Product_Category_Mapping_dbo_Product_ProductId" FromRole="Product" ToRole="Product_Category_Mapping" />
@@ -3057,11 +2118,9 @@
     <NavigationProperty Name="Product_Picture_Mapping" Relationship="DbModel.FK_dbo_Product_Picture_Mapping_dbo_Product_ProductId" FromRole="Product" ToRole="Product_Picture_Mapping" />
     <NavigationProperty Name="Product_ProductAttribute_Mapping" Relationship="DbModel.FK_dbo_Product_ProductAttribute_Mapping_dbo_Product_ProductId" FromRole="Product" ToRole="Product_ProductAttribute_Mapping" />
     <NavigationProperty Name="Product_SpecificationAttribute_Mapping" Relationship="DbModel.FK_dbo_Product_SpecificationAttribute_Mapping_dbo_Product_ProductId" FromRole="Product" ToRole="Product_SpecificationAttribute_Mapping" />
-    <NavigationProperty Name="ProductAttributeCombination" Relationship="DbModel.FK_dbo_ProductAttributeCombination_dbo_Product_ProductId" FromRole="Product" ToRole="ProductAttributeCombination" />
     <NavigationProperty Name="ProductReview" Relationship="DbModel.FK_dbo_ProductReview_dbo_Product_ProductId" FromRole="Product" ToRole="ProductReview" />
     <NavigationProperty Name="ProductWarehouseInventory" Relationship="DbModel.FK_dbo_ProductWarehouseInventory_dbo_Product_ProductId" FromRole="Product" ToRole="ProductWarehouseInventory" />
     <NavigationProperty Name="ShoppingCartItem" Relationship="DbModel.FK_dbo_ShoppingCartItem_dbo_Product_ProductId" FromRole="Product" ToRole="ShoppingCartItem" />
-    <NavigationProperty Name="TierPrice" Relationship="DbModel.FK_dbo_TierPrice_dbo_Product_ProductId" FromRole="Product" ToRole="TierPrice" />
     <NavigationProperty Name="Discount" Relationship="DbModel.Discount_AppliedToProducts" FromRole="Product" ToRole="Discount" />
   </EntityType>
   <EntityType Name="Product_Category_Mapping">
@@ -3071,8 +2130,6 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
     <Property Name="CategoryId" Type="Int32" Nullable="false" />
-    <Property Name="IsFeaturedProduct" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Category" Relationship="DbModel.FK_dbo_Product_Category_Mapping_dbo_Category_CategoryId" FromRole="Product_Category_Mapping" ToRole="Category" />
     <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_Product_Category_Mapping_dbo_Product_ProductId" FromRole="Product_Category_Mapping" ToRole="Product" />
   </EntityType>
@@ -3083,8 +2140,6 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
     <Property Name="ManufacturerId" Type="Int32" Nullable="false" />
-    <Property Name="IsFeaturedProduct" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Manufacturer" Relationship="DbModel.FK_dbo_Product_Manufacturer_Mapping_dbo_Manufacturer_ManufacturerId" FromRole="Product_Manufacturer_Mapping" ToRole="Manufacturer" />
     <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_Product_Manufacturer_Mapping_dbo_Product_ProductId" FromRole="Product_Manufacturer_Mapping" ToRole="Product" />
   </EntityType>
@@ -3108,12 +2163,7 @@
     <Property Name="ProductAttributeId" Type="Int32" Nullable="false" />
     <Property Name="TextPrompt" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="IsRequired" Type="Boolean" Nullable="false" />
-    <Property Name="AttributeControlTypeId" Type="Int32" Nullable="false" />
     <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <Property Name="ValidationMinLength" Type="Int32" />
-    <Property Name="ValidationMaxLength" Type="Int32" />
-    <Property Name="ValidationFileAllowedExtensions" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="ValidationFileMaximumSize" Type="Int32" />
     <Property Name="DefaultValue" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="ConditionAttributeXml" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_Product_ProductAttribute_Mapping_dbo_Product_ProductId" FromRole="Product_ProductAttribute_Mapping" ToRole="Product" />
@@ -3127,11 +2177,6 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
     <Property Name="AttributeTypeId" Type="Int32" Nullable="false" />
-    <Property Name="SpecificationAttributeOptionId" Type="Int32" Nullable="false" />
-    <Property Name="CustomValue" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AllowFiltering" Type="Boolean" Nullable="false" />
-    <Property Name="ShowOnProductPage" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_Product_SpecificationAttribute_Mapping_dbo_Product_ProductId" FromRole="Product_SpecificationAttribute_Mapping" ToRole="Product" />
   </EntityType>
   <EntityType Name="ProductAttribute">
@@ -3143,22 +2188,6 @@
     <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Product_ProductAttribute_Mapping" Relationship="DbModel.FK_dbo_Product_ProductAttribute_Mapping_dbo_ProductAttribute_ProductAttributeId" FromRole="ProductAttribute" ToRole="Product_ProductAttribute_Mapping" />
   </EntityType>
-  <EntityType Name="ProductAttributeCombination">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="ProductId" Type="Int32" Nullable="false" />
-    <Property Name="AttributesXml" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="StockQuantity" Type="Int32" Nullable="false" />
-    <Property Name="AllowOutOfStockOrders" Type="Boolean" Nullable="false" />
-    <Property Name="Sku" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ManufacturerPartNumber" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="Gtin" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="OverriddenPrice" Type="Decimal" Precision="18" Scale="4" />
-    <Property Name="NotifyAdminForQuantityBelow" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_ProductAttributeCombination_dbo_Product_ProductId" FromRole="ProductAttributeCombination" ToRole="Product" />
-  </EntityType>
   <EntityType Name="ProductAttributeValue">
     <Key>
       <PropertyRef Name="Id" />
@@ -3168,12 +2197,10 @@
     <Property Name="AttributeValueTypeId" Type="Int32" Nullable="false" />
     <Property Name="AssociatedProductId" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="ColorSquaresRgb" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
     <Property Name="PriceAdjustment" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="WeightAdjustment" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="Cost" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="IsPreSelected" Type="Boolean" Nullable="false" />
     <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <Property Name="PictureId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Product_ProductAttribute_Mapping" Relationship="DbModel.FK_dbo_ProductAttributeValue_dbo_Product_ProductAttribute_Mapping_ProductAttributeMappingId" FromRole="ProductAttributeValue" ToRole="Product_ProductAttribute_Mapping" />
@@ -3218,43 +2245,14 @@
     <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_ProductWarehouseInventory_dbo_Product_ProductId" FromRole="ProductWarehouseInventory" ToRole="Product" />
     <NavigationProperty Name="Warehouse" Relationship="DbModel.FK_dbo_ProductWarehouseInventory_dbo_Warehouse_WarehouseId" FromRole="ProductWarehouseInventory" ToRole="Warehouse" />
   </EntityType>
-  <EntityType Name="QueuedEmail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="PriorityId" Type="Int32" Nullable="false" />
-    <Property Name="From" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="FromName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="To" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="ToName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="ReplyTo" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="ReplyToName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="CC" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="Bcc" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="Subject" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-    <Property Name="Body" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AttachmentFilePath" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AttachmentFileName" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="AttachedDownloadId" Type="Int32" Nullable="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <Property Name="SentTries" Type="Int32" Nullable="false" />
-    <Property Name="SentOnUtc" Type="DateTime" />
-    <Property Name="EmailAccountId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="EmailAccount" Relationship="DbModel.FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId" FromRole="QueuedEmail" ToRole="EmailAccount" />
-  </EntityType>
   <EntityType Name="RecurringPayment">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="CycleLength" Type="Int32" Nullable="false" />
-    <Property Name="CyclePeriodId" Type="Int32" Nullable="false" />
     <Property Name="TotalCycles" Type="Int32" Nullable="false" />
     <Property Name="StartDateUtc" Type="DateTime" Nullable="false" />
-    <Property Name="IsActive" Type="Boolean" Nullable="false" />
     <Property Name="Deleted" Type="Boolean" Nullable="false" />
-    <Property Name="InitialOrderId" Type="Int32" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_RecurringPayment_dbo_Order_InitialOrderId" FromRole="RecurringPayment" ToRole="Order" />
   </EntityType>
@@ -3273,7 +2271,6 @@
     <Property Name="StaffNotes" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="ReturnRequestStatusId" Type="Int32" Nullable="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <Property Name="UpdatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_ReturnRequest_dbo_Customer_CustomerId" FromRole="ReturnRequest" ToRole="Customer" />
   </EntityType>
   <EntityType Name="ReturnRequestAction">
@@ -3292,22 +2289,6 @@
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityType Name="RewardPointsHistory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="StoreId" Type="Int32" Nullable="false" />
-    <Property Name="Points" Type="Int32" Nullable="false" />
-    <Property Name="PointsBalance" Type="Int32" Nullable="false" />
-    <Property Name="UsedAmount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <Property Name="Message" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
-    <Property Name="UsedWithOrder_Id" Type="Int32" />
-    <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId" FromRole="RewardPointsHistory" ToRole="Customer" />
-    <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id" FromRole="RewardPointsHistory" ToRole="Order" />
-  </EntityType>
   <EntityType Name="Shipment">
     <Key>
       <PropertyRef Name="Id" />
@@ -3315,10 +2296,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="OrderId" Type="Int32" Nullable="false" />
     <Property Name="TrackingNumber" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="TotalWeight" Type="Decimal" Precision="18" Scale="4" />
     <Property Name="ShippedDateUtc" Type="DateTime" />
     <Property Name="DeliveryDateUtc" Type="DateTime" />
-    <Property Name="AdminComment" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Order" Relationship="DbModel.FK_dbo_Shipment_dbo_Order_OrderId" FromRole="Shipment" ToRole="Order" />
     <NavigationProperty Name="ShipmentItem" Relationship="DbModel.FK_dbo_ShipmentItem_dbo_Shipment_ShipmentId" FromRole="Shipment" ToRole="ShipmentItem" />
@@ -3341,7 +2320,6 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Country" Relationship="DbModel.ShippingMethodRestrictions" FromRole="ShippingMethod" ToRole="Country" />
   </EntityType>
   <EntityType Name="ShoppingCartItem">
@@ -3353,11 +2331,7 @@
     <Property Name="ShoppingCartTypeId" Type="Int32" Nullable="false" />
     <Property Name="CustomerId" Type="Int32" Nullable="false" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
-    <Property Name="AttributesXml" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="CustomerEnteredPrice" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="RentalStartDateUtc" Type="DateTime" />
-    <Property Name="RentalEndDateUtc" Type="DateTime" />
     <Property Name="CreatedOnUtc" Type="DateTime" Nullable="false" />
     <Property Name="UpdatedOnUtc" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="Customer" Relationship="DbModel.FK_dbo_ShoppingCartItem_dbo_Customer_CustomerId" FromRole="ShoppingCartItem" ToRole="Customer" />
@@ -3370,9 +2344,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="CountryId" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-    <Property Name="Abbreviation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
     <Property Name="Published" Type="Boolean" Nullable="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Address" Relationship="DbModel.FK_dbo_Address_dbo_StateProvince_StateProvinceId" FromRole="StateProvince" ToRole="Address" />
     <NavigationProperty Name="Country" Relationship="DbModel.FK_dbo_StateProvince_dbo_Country_CountryId" FromRole="StateProvince" ToRole="Country" />
   </EntityType>
@@ -3383,15 +2355,10 @@
     <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="Url" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="SslEnabled" Type="Boolean" Nullable="false" />
-    <Property Name="SecureUrl" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="Hosts" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-    <Property Name="DefaultLanguageId" Type="Int32" Nullable="false" />
     <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
     <Property Name="CompanyName" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
     <Property Name="CompanyAddress" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
     <Property Name="CompanyPhoneNumber" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-    <Property Name="CompanyVat" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="StoreMapping" Relationship="DbModel.FK_dbo_StoreMapping_dbo_Store_StoreId" FromRole="Store" ToRole="StoreMapping" />
   </EntityType>
   <EntityType Name="StoreMapping">
@@ -3404,39 +2371,6 @@
     <Property Name="StoreId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Store" Relationship="DbModel.FK_dbo_StoreMapping_dbo_Store_StoreId" FromRole="StoreMapping" ToRole="Store" />
   </EntityType>
-  <EntityType Name="TaxCategory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TaxRate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="StoreId" Type="Int32" Nullable="false" />
-    <Property Name="TaxCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="CountryId" Type="Int32" Nullable="false" />
-    <Property Name="StateProvinceId" Type="Int32" Nullable="false" />
-    <Property Name="Zip" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="Percentage" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-  </EntityType>
-  <EntityType Name="TierPrice">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="ProductId" Type="Int32" Nullable="false" />
-    <Property Name="StoreId" Type="Int32" Nullable="false" />
-    <Property Name="CustomerRoleId" Type="Int32" />
-    <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
-    <NavigationProperty Name="CustomerRole" Relationship="DbModel.FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId" FromRole="TierPrice" ToRole="CustomerRole" />
-    <NavigationProperty Name="Product" Relationship="DbModel.FK_dbo_TierPrice_dbo_Product_ProductId" FromRole="TierPrice" ToRole="Product" />
-  </EntityType>
   <EntityType Name="Vendor">
     <Key>
       <PropertyRef Name="Id" />
@@ -3446,16 +2380,8 @@
     <Property Name="Email" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
     <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="PictureId" Type="Int32" Nullable="false" />
-    <Property Name="AdminComment" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
-    <Property Name="Deleted" Type="Boolean" Nullable="false" />
     <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <Property Name="MetaKeywords" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="MetaDescription" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-    <Property Name="MetaTitle" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
-    <Property Name="PageSize" Type="Int32" Nullable="false" />
-    <Property Name="AllowCustomersToSelectPageSize" Type="Boolean" Nullable="false" />
-    <Property Name="PageSizeOptions" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="Warehouse">
     <Key>
@@ -3467,20 +2393,6 @@
     <Property Name="AddressId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ProductWarehouseInventory" Relationship="DbModel.FK_dbo_ProductWarehouseInventory_dbo_Warehouse_WarehouseId" FromRole="Warehouse" ToRole="ProductWarehouseInventory" />
   </EntityType>
-  <Association Name="FK_dbo_ActivityLog_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ActivityLog" Type="DbModel.ActivityLog" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ActivityLog">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_Address_dbo_Country_CountryId">
     <End Role="Country" Type="DbModel.Country" Multiplicity="0..1" />
     <End Role="Address" Type="DbModel.Address" Multiplicity="*" />
@@ -3595,20 +2507,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_CheckoutAttributeValue_dbo_CheckoutAttribute_CheckoutAttributeId">
-    <End Role="CheckoutAttribute" Type="DbModel.CheckoutAttribute" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="CheckoutAttributeValue" Type="DbModel.CheckoutAttributeValue" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CheckoutAttribute">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="CheckoutAttributeValue">
-        <PropertyRef Name="CheckoutAttributeId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_StateProvince_dbo_Country_CountryId">
     <End Role="Country" Type="DbModel.Country" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -3620,34 +2518,6 @@
       </Principal>
       <Dependent Role="StateProvince">
         <PropertyRef Name="CountryId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_ExternalAuthenticationRecord_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ExternalAuthenticationRecord" Type="DbModel.ExternalAuthenticationRecord" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ExternalAuthenticationRecord">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_NewsComment_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="NewsComment" Type="DbModel.NewsComment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="NewsComment">
-        <PropertyRef Name="CustomerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3693,20 +2563,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_RewardPointsHistory_dbo_Customer_CustomerId">
-    <End Role="Customer" Type="DbModel.Customer" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="RewardPointsHistory" Type="DbModel.RewardPointsHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="RewardPointsHistory">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_ShoppingCartItem_dbo_Customer_CustomerId">
     <End Role="Customer" Type="DbModel.Customer" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -3718,20 +2574,6 @@
       </Principal>
       <Dependent Role="ShoppingCartItem">
         <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_TierPrice_dbo_CustomerRole_CustomerRoleId">
-    <End Role="CustomerRole" Type="DbModel.CustomerRole" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="TierPrice" Type="DbModel.TierPrice" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CustomerRole">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TierPrice">
-        <PropertyRef Name="CustomerRoleId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3777,60 +2619,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_QueuedEmail_dbo_EmailAccount_EmailAccountId">
-    <End Role="EmailAccount" Type="DbModel.EmailAccount" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="QueuedEmail" Type="DbModel.QueuedEmail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="EmailAccount">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="QueuedEmail">
-        <PropertyRef Name="EmailAccountId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_GiftCard_dbo_OrderItem_PurchasedWithOrderItemId">
-    <End Role="OrderItem" Type="DbModel.OrderItem" Multiplicity="0..1" />
-    <End Role="GiftCard" Type="DbModel.GiftCard" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrderItem">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="GiftCard">
-        <PropertyRef Name="PurchasedWithOrderItemId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_GiftCardUsageHistory_dbo_GiftCard_GiftCardId">
-    <End Role="GiftCard" Type="DbModel.GiftCard" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="GiftCardUsageHistory" Type="DbModel.GiftCardUsageHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GiftCard">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="GiftCardUsageHistory">
-        <PropertyRef Name="GiftCardId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_GiftCardUsageHistory_dbo_Order_UsedWithOrderId">
-    <End Role="Order" Type="DbModel.Order" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="GiftCardUsageHistory" Type="DbModel.GiftCardUsageHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Order">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="GiftCardUsageHistory">
-        <PropertyRef Name="UsedWithOrderId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_Product_Manufacturer_Mapping_dbo_Manufacturer_ManufacturerId">
     <End Role="Manufacturer" Type="DbModel.Manufacturer" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -3842,20 +2630,6 @@
       </Principal>
       <Dependent Role="Product_Manufacturer_Mapping">
         <PropertyRef Name="ManufacturerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_NewsComment_dbo_News_NewsItemId">
-    <End Role="News" Type="DbModel.News" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="NewsComment" Type="DbModel.NewsComment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="News">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="NewsComment">
-        <PropertyRef Name="NewsItemId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3882,18 +2656,6 @@
       </Principal>
       <Dependent Role="RecurringPayment">
         <PropertyRef Name="InitialOrderId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_RewardPointsHistory_dbo_Order_UsedWithOrder_Id">
-    <End Role="Order" Type="DbModel.Order" Multiplicity="0..1" />
-    <End Role="RewardPointsHistory" Type="DbModel.RewardPointsHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Order">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="RewardPointsHistory">
-        <PropertyRef Name="UsedWithOrder_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -4009,20 +2771,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_ProductAttributeCombination_dbo_Product_ProductId">
-    <End Role="Product" Type="DbModel.Product" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ProductAttributeCombination" Type="DbModel.ProductAttributeCombination" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ProductAttributeCombination">
-        <PropertyRef Name="ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dbo_ProductReview_dbo_Product_ProductId">
     <End Role="Product" Type="DbModel.Product" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -4061,20 +2809,6 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="ShoppingCartItem">
-        <PropertyRef Name="ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_TierPrice_dbo_Product_ProductId">
-    <End Role="Product" Type="DbModel.Product" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="TierPrice" Type="DbModel.TierPrice" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TierPrice">
         <PropertyRef Name="ProductId" />
       </Dependent>
     </ReferentialConstraint>
@@ -4193,17 +2927,6 @@
 <edmx:Mappings>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DbModelStoreContainer" CdmEntityContainer="DbEntities">
-    <EntitySetMapping Name="ActivityLog">
-      <EntityTypeMapping TypeName="DbModel.ActivityLog">
-        <MappingFragment StoreEntitySet="ActivityLog">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="ActivityLogTypeId" ColumnName="ActivityLogTypeId" />
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-          <ScalarProperty Name="Comment" ColumnName="Comment" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Address">
       <EntityTypeMapping TypeName="DbModel.Address">
         <MappingFragment StoreEntitySet="Address">
@@ -4216,11 +2939,7 @@
           <ScalarProperty Name="StateProvinceId" ColumnName="StateProvinceId" />
           <ScalarProperty Name="City" ColumnName="City" />
           <ScalarProperty Name="Address1" ColumnName="Address1" />
-          <ScalarProperty Name="Address2" ColumnName="Address2" />
-          <ScalarProperty Name="ZipPostalCode" ColumnName="ZipPostalCode" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
-          <ScalarProperty Name="CustomAttributes" ColumnName="CustomAttributes" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -4242,70 +2961,13 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="CategoryTemplateId" ColumnName="CategoryTemplateId" />
-          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
-          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
-          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
           <ScalarProperty Name="ParentCategoryId" ColumnName="ParentCategoryId" />
           <ScalarProperty Name="PictureId" ColumnName="PictureId" />
-          <ScalarProperty Name="PageSize" ColumnName="PageSize" />
-          <ScalarProperty Name="AllowCustomersToSelectPageSize" ColumnName="AllowCustomersToSelectPageSize" />
-          <ScalarProperty Name="PageSizeOptions" ColumnName="PageSizeOptions" />
           <ScalarProperty Name="PriceRanges" ColumnName="PriceRanges" />
-          <ScalarProperty Name="ShowOnHomePage" ColumnName="ShowOnHomePage" />
-          <ScalarProperty Name="IncludeInTopMenu" ColumnName="IncludeInTopMenu" />
-          <ScalarProperty Name="SubjectToAcl" ColumnName="SubjectToAcl" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
           <ScalarProperty Name="Published" ColumnName="Published" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
           <ScalarProperty Name="UpdatedOnUtc" ColumnName="UpdatedOnUtc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CategoryTemplate">
-      <EntityTypeMapping TypeName="DbModel.CategoryTemplate">
-        <MappingFragment StoreEntitySet="CategoryTemplate">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ViewPath" ColumnName="ViewPath" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CheckoutAttribute">
-      <EntityTypeMapping TypeName="DbModel.CheckoutAttribute">
-        <MappingFragment StoreEntitySet="CheckoutAttribute">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="TextPrompt" ColumnName="TextPrompt" />
-          <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
-          <ScalarProperty Name="ShippableProductRequired" ColumnName="ShippableProductRequired" />
-          <ScalarProperty Name="IsTaxExempt" ColumnName="IsTaxExempt" />
-          <ScalarProperty Name="TaxCategoryId" ColumnName="TaxCategoryId" />
-          <ScalarProperty Name="AttributeControlTypeId" ColumnName="AttributeControlTypeId" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
-          <ScalarProperty Name="ValidationMinLength" ColumnName="ValidationMinLength" />
-          <ScalarProperty Name="ValidationMaxLength" ColumnName="ValidationMaxLength" />
-          <ScalarProperty Name="ValidationFileAllowedExtensions" ColumnName="ValidationFileAllowedExtensions" />
-          <ScalarProperty Name="ValidationFileMaximumSize" ColumnName="ValidationFileMaximumSize" />
-          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CheckoutAttributeValue">
-      <EntityTypeMapping TypeName="DbModel.CheckoutAttributeValue">
-        <MappingFragment StoreEntitySet="CheckoutAttributeValue">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CheckoutAttributeId" ColumnName="CheckoutAttributeId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ColorSquaresRgb" ColumnName="ColorSquaresRgb" />
-          <ScalarProperty Name="PriceAdjustment" ColumnName="PriceAdjustment" />
-          <ScalarProperty Name="WeightAdjustment" ColumnName="WeightAdjustment" />
-          <ScalarProperty Name="IsPreSelected" ColumnName="IsPreSelected" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4316,13 +2978,7 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="AllowsBilling" ColumnName="AllowsBilling" />
           <ScalarProperty Name="AllowsShipping" ColumnName="AllowsShipping" />
-          <ScalarProperty Name="TwoLetterIsoCode" ColumnName="TwoLetterIsoCode" />
-          <ScalarProperty Name="ThreeLetterIsoCode" ColumnName="ThreeLetterIsoCode" />
-          <ScalarProperty Name="NumericIsoCode" ColumnName="NumericIsoCode" />
-          <ScalarProperty Name="SubjectToVat" ColumnName="SubjectToVat" />
           <ScalarProperty Name="Published" ColumnName="Published" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4334,18 +2990,13 @@
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="PasswordFormatId" ColumnName="PasswordFormatId" />
           <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
-          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
-          <ScalarProperty Name="IsTaxExempt" ColumnName="IsTaxExempt" />
-          <ScalarProperty Name="AffiliateId" ColumnName="AffiliateId" />
           <ScalarProperty Name="VendorId" ColumnName="VendorId" />
           <ScalarProperty Name="HasShoppingCartItems" ColumnName="HasShoppingCartItems" />
           <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
           <ScalarProperty Name="IsSystemAccount" ColumnName="IsSystemAccount" />
           <ScalarProperty Name="SystemName" ColumnName="SystemName" />
-          <ScalarProperty Name="LastIpAddress" ColumnName="LastIpAddress" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
           <ScalarProperty Name="LastLoginDateUtc" ColumnName="LastLoginDateUtc" />
           <ScalarProperty Name="LastActivityDateUtc" ColumnName="LastActivityDateUtc" />
@@ -4360,7 +3011,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="FreeShipping" ColumnName="FreeShipping" />
-          <ScalarProperty Name="TaxExempt" ColumnName="TaxExempt" />
           <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="IsSystemRole" ColumnName="IsSystemRole" />
           <ScalarProperty Name="SystemName" ColumnName="SystemName" />
@@ -4394,7 +3044,6 @@
           <ScalarProperty Name="DiscountLimitationId" ColumnName="DiscountLimitationId" />
           <ScalarProperty Name="LimitationTimes" ColumnName="LimitationTimes" />
           <ScalarProperty Name="MaximumDiscountedQuantity" ColumnName="MaximumDiscountedQuantity" />
-          <ScalarProperty Name="AppliedToSubCategories" ColumnName="AppliedToSubCategories" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4417,145 +3066,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EmailAccount">
-      <EntityTypeMapping TypeName="DbModel.EmailAccount">
-        <MappingFragment StoreEntitySet="EmailAccount">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
-          <ScalarProperty Name="Host" ColumnName="Host" />
-          <ScalarProperty Name="Port" ColumnName="Port" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="EnableSsl" ColumnName="EnableSsl" />
-          <ScalarProperty Name="UseDefaultCredentials" ColumnName="UseDefaultCredentials" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ExternalAuthenticationRecord">
-      <EntityTypeMapping TypeName="DbModel.ExternalAuthenticationRecord">
-        <MappingFragment StoreEntitySet="ExternalAuthenticationRecord">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="ExternalIdentifier" ColumnName="ExternalIdentifier" />
-          <ScalarProperty Name="ExternalDisplayIdentifier" ColumnName="ExternalDisplayIdentifier" />
-          <ScalarProperty Name="OAuthToken" ColumnName="OAuthToken" />
-          <ScalarProperty Name="OAuthAccessToken" ColumnName="OAuthAccessToken" />
-          <ScalarProperty Name="ProviderSystemName" ColumnName="ProviderSystemName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GiftCard">
-      <EntityTypeMapping TypeName="DbModel.GiftCard">
-        <MappingFragment StoreEntitySet="GiftCard">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="PurchasedWithOrderItemId" ColumnName="PurchasedWithOrderItemId" />
-          <ScalarProperty Name="GiftCardTypeId" ColumnName="GiftCardTypeId" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
-          <ScalarProperty Name="IsGiftCardActivated" ColumnName="IsGiftCardActivated" />
-          <ScalarProperty Name="GiftCardCouponCode" ColumnName="GiftCardCouponCode" />
-          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
-          <ScalarProperty Name="RecipientEmail" ColumnName="RecipientEmail" />
-          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
-          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
-          <ScalarProperty Name="Message" ColumnName="Message" />
-          <ScalarProperty Name="IsRecipientNotified" ColumnName="IsRecipientNotified" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GiftCardUsageHistory">
-      <EntityTypeMapping TypeName="DbModel.GiftCardUsageHistory">
-        <MappingFragment StoreEntitySet="GiftCardUsageHistory">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
-          <ScalarProperty Name="UsedWithOrderId" ColumnName="UsedWithOrderId" />
-          <ScalarProperty Name="UsedValue" ColumnName="UsedValue" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Manufacturer">
       <EntityTypeMapping TypeName="DbModel.Manufacturer">
         <MappingFragment StoreEntitySet="Manufacturer">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="ManufacturerTemplateId" ColumnName="ManufacturerTemplateId" />
-          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
-          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
-          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
           <ScalarProperty Name="PictureId" ColumnName="PictureId" />
-          <ScalarProperty Name="PageSize" ColumnName="PageSize" />
-          <ScalarProperty Name="AllowCustomersToSelectPageSize" ColumnName="AllowCustomersToSelectPageSize" />
-          <ScalarProperty Name="PageSizeOptions" ColumnName="PageSizeOptions" />
           <ScalarProperty Name="PriceRanges" ColumnName="PriceRanges" />
-          <ScalarProperty Name="SubjectToAcl" ColumnName="SubjectToAcl" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
-          <ScalarProperty Name="Published" ColumnName="Published" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-          <ScalarProperty Name="UpdatedOnUtc" ColumnName="UpdatedOnUtc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ManufacturerTemplate">
-      <EntityTypeMapping TypeName="DbModel.ManufacturerTemplate">
-        <MappingFragment StoreEntitySet="ManufacturerTemplate">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ViewPath" ColumnName="ViewPath" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MessageTemplate">
-      <EntityTypeMapping TypeName="DbModel.MessageTemplate">
-        <MappingFragment StoreEntitySet="MessageTemplate">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="BccEmailAddresses" ColumnName="BccEmailAddresses" />
-          <ScalarProperty Name="Subject" ColumnName="Subject" />
-          <ScalarProperty Name="Body" ColumnName="Body" />
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="AttachedDownloadId" ColumnName="AttachedDownloadId" />
-          <ScalarProperty Name="EmailAccountId" ColumnName="EmailAccountId" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="News">
-      <EntityTypeMapping TypeName="DbModel.News">
-        <MappingFragment StoreEntitySet="News">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Short" ColumnName="Short" />
-          <ScalarProperty Name="Full" ColumnName="Full" />
-          <ScalarProperty Name="Published" ColumnName="Published" />
-          <ScalarProperty Name="StartDateUtc" ColumnName="StartDateUtc" />
-          <ScalarProperty Name="EndDateUtc" ColumnName="EndDateUtc" />
-          <ScalarProperty Name="AllowComments" ColumnName="AllowComments" />
-          <ScalarProperty Name="CommentCount" ColumnName="CommentCount" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
-          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
-          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
-          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NewsComment">
-      <EntityTypeMapping TypeName="DbModel.NewsComment">
-        <MappingFragment StoreEntitySet="NewsComment">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CommentTitle" ColumnName="CommentTitle" />
-          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
-          <ScalarProperty Name="NewsItemId" ColumnName="NewsItemId" />
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4568,52 +3087,25 @@
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="BillingAddressId" ColumnName="BillingAddressId" />
           <ScalarProperty Name="ShippingAddressId" ColumnName="ShippingAddressId" />
-          <ScalarProperty Name="PickUpInStore" ColumnName="PickUpInStore" />
           <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
           <ScalarProperty Name="ShippingStatusId" ColumnName="ShippingStatusId" />
           <ScalarProperty Name="PaymentStatusId" ColumnName="PaymentStatusId" />
           <ScalarProperty Name="PaymentMethodSystemName" ColumnName="PaymentMethodSystemName" />
-          <ScalarProperty Name="CustomerCurrencyCode" ColumnName="CustomerCurrencyCode" />
-          <ScalarProperty Name="CurrencyRate" ColumnName="CurrencyRate" />
-          <ScalarProperty Name="CustomerTaxDisplayTypeId" ColumnName="CustomerTaxDisplayTypeId" />
-          <ScalarProperty Name="VatNumber" ColumnName="VatNumber" />
-          <ScalarProperty Name="OrderSubtotalInclTax" ColumnName="OrderSubtotalInclTax" />
-          <ScalarProperty Name="OrderSubtotalExclTax" ColumnName="OrderSubtotalExclTax" />
-          <ScalarProperty Name="OrderSubTotalDiscountInclTax" ColumnName="OrderSubTotalDiscountInclTax" />
-          <ScalarProperty Name="OrderSubTotalDiscountExclTax" ColumnName="OrderSubTotalDiscountExclTax" />
-          <ScalarProperty Name="OrderShippingInclTax" ColumnName="OrderShippingInclTax" />
-          <ScalarProperty Name="OrderShippingExclTax" ColumnName="OrderShippingExclTax" />
-          <ScalarProperty Name="PaymentMethodAdditionalFeeInclTax" ColumnName="PaymentMethodAdditionalFeeInclTax" />
-          <ScalarProperty Name="PaymentMethodAdditionalFeeExclTax" ColumnName="PaymentMethodAdditionalFeeExclTax" />
-          <ScalarProperty Name="TaxRates" ColumnName="TaxRates" />
-          <ScalarProperty Name="OrderTax" ColumnName="OrderTax" />
           <ScalarProperty Name="OrderDiscount" ColumnName="OrderDiscount" />
           <ScalarProperty Name="OrderTotal" ColumnName="OrderTotal" />
           <ScalarProperty Name="RefundedAmount" ColumnName="RefundedAmount" />
-          <ScalarProperty Name="RewardPointsWereAdded" ColumnName="RewardPointsWereAdded" />
-          <ScalarProperty Name="CheckoutAttributeDescription" ColumnName="CheckoutAttributeDescription" />
-          <ScalarProperty Name="CheckoutAttributesXml" ColumnName="CheckoutAttributesXml" />
-          <ScalarProperty Name="CustomerLanguageId" ColumnName="CustomerLanguageId" />
-          <ScalarProperty Name="AffiliateId" ColumnName="AffiliateId" />
-          <ScalarProperty Name="CustomerIp" ColumnName="CustomerIp" />
           <ScalarProperty Name="AllowStoringCreditCardNumber" ColumnName="AllowStoringCreditCardNumber" />
           <ScalarProperty Name="CardType" ColumnName="CardType" />
           <ScalarProperty Name="CardName" ColumnName="CardName" />
           <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
-          <ScalarProperty Name="MaskedCreditCardNumber" ColumnName="MaskedCreditCardNumber" />
           <ScalarProperty Name="CardCvv2" ColumnName="CardCvv2" />
           <ScalarProperty Name="CardExpirationMonth" ColumnName="CardExpirationMonth" />
           <ScalarProperty Name="CardExpirationYear" ColumnName="CardExpirationYear" />
-          <ScalarProperty Name="AuthorizationTransactionId" ColumnName="AuthorizationTransactionId" />
-          <ScalarProperty Name="AuthorizationTransactionCode" ColumnName="AuthorizationTransactionCode" />
-          <ScalarProperty Name="AuthorizationTransactionResult" ColumnName="AuthorizationTransactionResult" />
           <ScalarProperty Name="CaptureTransactionId" ColumnName="CaptureTransactionId" />
           <ScalarProperty Name="CaptureTransactionResult" ColumnName="CaptureTransactionResult" />
           <ScalarProperty Name="SubscriptionTransactionId" ColumnName="SubscriptionTransactionId" />
           <ScalarProperty Name="PaidDateUtc" ColumnName="PaidDateUtc" />
           <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
-          <ScalarProperty Name="ShippingRateComputationMethodSystemName" ColumnName="ShippingRateComputationMethodSystemName" />
-          <ScalarProperty Name="CustomValuesXml" ColumnName="CustomValuesXml" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
         </MappingFragment>
@@ -4627,21 +3119,9 @@
           <ScalarProperty Name="OrderId" ColumnName="OrderId" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="UnitPriceInclTax" ColumnName="UnitPriceInclTax" />
-          <ScalarProperty Name="UnitPriceExclTax" ColumnName="UnitPriceExclTax" />
-          <ScalarProperty Name="PriceInclTax" ColumnName="PriceInclTax" />
-          <ScalarProperty Name="PriceExclTax" ColumnName="PriceExclTax" />
           <ScalarProperty Name="DiscountAmountInclTax" ColumnName="DiscountAmountInclTax" />
-          <ScalarProperty Name="DiscountAmountExclTax" ColumnName="DiscountAmountExclTax" />
           <ScalarProperty Name="OriginalProductCost" ColumnName="OriginalProductCost" />
-          <ScalarProperty Name="AttributeDescription" ColumnName="AttributeDescription" />
-          <ScalarProperty Name="AttributesXml" ColumnName="AttributesXml" />
-          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
-          <ScalarProperty Name="IsDownloadActivated" ColumnName="IsDownloadActivated" />
-          <ScalarProperty Name="LicenseDownloadId" ColumnName="LicenseDownloadId" />
           <ScalarProperty Name="ItemWeight" ColumnName="ItemWeight" />
-          <ScalarProperty Name="RentalStartDateUtc" ColumnName="RentalStartDateUtc" />
-          <ScalarProperty Name="RentalEndDateUtc" ColumnName="RentalEndDateUtc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4649,10 +3129,6 @@
       <EntityTypeMapping TypeName="DbModel.Picture">
         <MappingFragment StoreEntitySet="Picture">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="PictureBinary" ColumnName="PictureBinary" />
-          <ScalarProperty Name="MimeType" ColumnName="MimeType" />
-          <ScalarProperty Name="SeoFilename" ColumnName="SeoFilename" />
-          <ScalarProperty Name="AltAttribute" ColumnName="AltAttribute" />
           <ScalarProperty Name="TitleAttribute" ColumnName="TitleAttribute" />
           <ScalarProperty Name="IsNew" ColumnName="IsNew" />
         </MappingFragment>
@@ -4663,109 +3139,21 @@
         <MappingFragment StoreEntitySet="Product">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
-          <ScalarProperty Name="ParentGroupedProductId" ColumnName="ParentGroupedProductId" />
-          <ScalarProperty Name="VisibleIndividually" ColumnName="VisibleIndividually" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
-          <ScalarProperty Name="FullDescription" ColumnName="FullDescription" />
-          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
-          <ScalarProperty Name="ProductTemplateId" ColumnName="ProductTemplateId" />
           <ScalarProperty Name="VendorId" ColumnName="VendorId" />
-          <ScalarProperty Name="ShowOnHomePage" ColumnName="ShowOnHomePage" />
-          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
-          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
-          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
-          <ScalarProperty Name="AllowCustomerReviews" ColumnName="AllowCustomerReviews" />
-          <ScalarProperty Name="ApprovedRatingSum" ColumnName="ApprovedRatingSum" />
-          <ScalarProperty Name="NotApprovedRatingSum" ColumnName="NotApprovedRatingSum" />
-          <ScalarProperty Name="ApprovedTotalReviews" ColumnName="ApprovedTotalReviews" />
-          <ScalarProperty Name="NotApprovedTotalReviews" ColumnName="NotApprovedTotalReviews" />
-          <ScalarProperty Name="SubjectToAcl" ColumnName="SubjectToAcl" />
-          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
           <ScalarProperty Name="Sku" ColumnName="Sku" />
-          <ScalarProperty Name="ManufacturerPartNumber" ColumnName="ManufacturerPartNumber" />
-          <ScalarProperty Name="Gtin" ColumnName="Gtin" />
-          <ScalarProperty Name="IsGiftCard" ColumnName="IsGiftCard" />
-          <ScalarProperty Name="GiftCardTypeId" ColumnName="GiftCardTypeId" />
-          <ScalarProperty Name="OverriddenGiftCardAmount" ColumnName="OverriddenGiftCardAmount" />
-          <ScalarProperty Name="RequireOtherProducts" ColumnName="RequireOtherProducts" />
-          <ScalarProperty Name="RequiredProductIds" ColumnName="RequiredProductIds" />
-          <ScalarProperty Name="AutomaticallyAddRequiredProducts" ColumnName="AutomaticallyAddRequiredProducts" />
-          <ScalarProperty Name="IsDownload" ColumnName="IsDownload" />
-          <ScalarProperty Name="DownloadId" ColumnName="DownloadId" />
-          <ScalarProperty Name="UnlimitedDownloads" ColumnName="UnlimitedDownloads" />
-          <ScalarProperty Name="MaxNumberOfDownloads" ColumnName="MaxNumberOfDownloads" />
-          <ScalarProperty Name="DownloadExpirationDays" ColumnName="DownloadExpirationDays" />
-          <ScalarProperty Name="DownloadActivationTypeId" ColumnName="DownloadActivationTypeId" />
-          <ScalarProperty Name="HasSampleDownload" ColumnName="HasSampleDownload" />
-          <ScalarProperty Name="SampleDownloadId" ColumnName="SampleDownloadId" />
-          <ScalarProperty Name="HasUserAgreement" ColumnName="HasUserAgreement" />
-          <ScalarProperty Name="UserAgreementText" ColumnName="UserAgreementText" />
-          <ScalarProperty Name="IsRecurring" ColumnName="IsRecurring" />
-          <ScalarProperty Name="RecurringCycleLength" ColumnName="RecurringCycleLength" />
-          <ScalarProperty Name="RecurringCyclePeriodId" ColumnName="RecurringCyclePeriodId" />
           <ScalarProperty Name="RecurringTotalCycles" ColumnName="RecurringTotalCycles" />
-          <ScalarProperty Name="IsRental" ColumnName="IsRental" />
-          <ScalarProperty Name="RentalPriceLength" ColumnName="RentalPriceLength" />
-          <ScalarProperty Name="RentalPricePeriodId" ColumnName="RentalPricePeriodId" />
           <ScalarProperty Name="IsShipEnabled" ColumnName="IsShipEnabled" />
           <ScalarProperty Name="IsFreeShipping" ColumnName="IsFreeShipping" />
-          <ScalarProperty Name="ShipSeparately" ColumnName="ShipSeparately" />
           <ScalarProperty Name="AdditionalShippingCharge" ColumnName="AdditionalShippingCharge" />
           <ScalarProperty Name="DeliveryDateId" ColumnName="DeliveryDateId" />
-          <ScalarProperty Name="IsTaxExempt" ColumnName="IsTaxExempt" />
-          <ScalarProperty Name="TaxCategoryId" ColumnName="TaxCategoryId" />
-          <ScalarProperty Name="IsTelecommunicationsOrBroadcastingOrElectronicServices" ColumnName="IsTelecommunicationsOrBroadcastingOrElectronicServices" />
-          <ScalarProperty Name="ManageInventoryMethodId" ColumnName="ManageInventoryMethodId" />
-          <ScalarProperty Name="UseMultipleWarehouses" ColumnName="UseMultipleWarehouses" />
           <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
           <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
-          <ScalarProperty Name="DisplayStockAvailability" ColumnName="DisplayStockAvailability" />
-          <ScalarProperty Name="DisplayStockQuantity" ColumnName="DisplayStockQuantity" />
-          <ScalarProperty Name="MinStockQuantity" ColumnName="MinStockQuantity" />
-          <ScalarProperty Name="LowStockActivityId" ColumnName="LowStockActivityId" />
-          <ScalarProperty Name="NotifyAdminForQuantityBelow" ColumnName="NotifyAdminForQuantityBelow" />
-          <ScalarProperty Name="BackorderModeId" ColumnName="BackorderModeId" />
-          <ScalarProperty Name="AllowBackInStockSubscriptions" ColumnName="AllowBackInStockSubscriptions" />
-          <ScalarProperty Name="OrderMinimumQuantity" ColumnName="OrderMinimumQuantity" />
-          <ScalarProperty Name="OrderMaximumQuantity" ColumnName="OrderMaximumQuantity" />
-          <ScalarProperty Name="AllowedQuantities" ColumnName="AllowedQuantities" />
-          <ScalarProperty Name="AllowAddingOnlyExistingAttributeCombinations" ColumnName="AllowAddingOnlyExistingAttributeCombinations" />
-          <ScalarProperty Name="DisableBuyButton" ColumnName="DisableBuyButton" />
-          <ScalarProperty Name="DisableWishlistButton" ColumnName="DisableWishlistButton" />
-          <ScalarProperty Name="AvailableForPreOrder" ColumnName="AvailableForPreOrder" />
-          <ScalarProperty Name="PreOrderAvailabilityStartDateTimeUtc" ColumnName="PreOrderAvailabilityStartDateTimeUtc" />
-          <ScalarProperty Name="CallForPrice" ColumnName="CallForPrice" />
           <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
           <ScalarProperty Name="ProductCost" ColumnName="ProductCost" />
-          <ScalarProperty Name="SpecialPrice" ColumnName="SpecialPrice" />
-          <ScalarProperty Name="SpecialPriceStartDateTimeUtc" ColumnName="SpecialPriceStartDateTimeUtc" />
-          <ScalarProperty Name="SpecialPriceEndDateTimeUtc" ColumnName="SpecialPriceEndDateTimeUtc" />
-          <ScalarProperty Name="CustomerEntersPrice" ColumnName="CustomerEntersPrice" />
-          <ScalarProperty Name="MinimumCustomerEnteredPrice" ColumnName="MinimumCustomerEnteredPrice" />
-          <ScalarProperty Name="MaximumCustomerEnteredPrice" ColumnName="MaximumCustomerEnteredPrice" />
-          <ScalarProperty Name="BasepriceEnabled" ColumnName="BasepriceEnabled" />
-          <ScalarProperty Name="BasepriceAmount" ColumnName="BasepriceAmount" />
-          <ScalarProperty Name="BasepriceUnitId" ColumnName="BasepriceUnitId" />
-          <ScalarProperty Name="BasepriceBaseAmount" ColumnName="BasepriceBaseAmount" />
-          <ScalarProperty Name="BasepriceBaseUnitId" ColumnName="BasepriceBaseUnitId" />
-          <ScalarProperty Name="MarkAsNew" ColumnName="MarkAsNew" />
-          <ScalarProperty Name="MarkAsNewStartDateTimeUtc" ColumnName="MarkAsNewStartDateTimeUtc" />
-          <ScalarProperty Name="MarkAsNewEndDateTimeUtc" ColumnName="MarkAsNewEndDateTimeUtc" />
-          <ScalarProperty Name="HasTierPrices" ColumnName="HasTierPrices" />
-          <ScalarProperty Name="HasDiscountsApplied" ColumnName="HasDiscountsApplied" />
-          <ScalarProperty Name="Weight" ColumnName="Weight" />
-          <ScalarProperty Name="Length" ColumnName="Length" />
-          <ScalarProperty Name="Width" ColumnName="Width" />
-          <ScalarProperty Name="Height" ColumnName="Height" />
-          <ScalarProperty Name="AvailableStartDateTimeUtc" ColumnName="AvailableStartDateTimeUtc" />
-          <ScalarProperty Name="AvailableEndDateTimeUtc" ColumnName="AvailableEndDateTimeUtc" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
           <ScalarProperty Name="Published" ColumnName="Published" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-          <ScalarProperty Name="UpdatedOnUtc" ColumnName="UpdatedOnUtc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4775,8 +3163,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-          <ScalarProperty Name="IsFeaturedProduct" ColumnName="IsFeaturedProduct" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4786,8 +3172,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
-          <ScalarProperty Name="IsFeaturedProduct" ColumnName="IsFeaturedProduct" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4809,12 +3193,7 @@
           <ScalarProperty Name="ProductAttributeId" ColumnName="ProductAttributeId" />
           <ScalarProperty Name="TextPrompt" ColumnName="TextPrompt" />
           <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
-          <ScalarProperty Name="AttributeControlTypeId" ColumnName="AttributeControlTypeId" />
           <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-          <ScalarProperty Name="ValidationMinLength" ColumnName="ValidationMinLength" />
-          <ScalarProperty Name="ValidationMaxLength" ColumnName="ValidationMaxLength" />
-          <ScalarProperty Name="ValidationFileAllowedExtensions" ColumnName="ValidationFileAllowedExtensions" />
-          <ScalarProperty Name="ValidationFileMaximumSize" ColumnName="ValidationFileMaximumSize" />
           <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
           <ScalarProperty Name="ConditionAttributeXml" ColumnName="ConditionAttributeXml" />
         </MappingFragment>
@@ -4826,11 +3205,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="AttributeTypeId" ColumnName="AttributeTypeId" />
-          <ScalarProperty Name="SpecificationAttributeOptionId" ColumnName="SpecificationAttributeOptionId" />
-          <ScalarProperty Name="CustomValue" ColumnName="CustomValue" />
-          <ScalarProperty Name="AllowFiltering" ColumnName="AllowFiltering" />
-          <ScalarProperty Name="ShowOnProductPage" ColumnName="ShowOnProductPage" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4843,22 +3217,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ProductAttributeCombination">
-      <EntityTypeMapping TypeName="DbModel.ProductAttributeCombination">
-        <MappingFragment StoreEntitySet="ProductAttributeCombination">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-          <ScalarProperty Name="AttributesXml" ColumnName="AttributesXml" />
-          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
-          <ScalarProperty Name="AllowOutOfStockOrders" ColumnName="AllowOutOfStockOrders" />
-          <ScalarProperty Name="Sku" ColumnName="Sku" />
-          <ScalarProperty Name="ManufacturerPartNumber" ColumnName="ManufacturerPartNumber" />
-          <ScalarProperty Name="Gtin" ColumnName="Gtin" />
-          <ScalarProperty Name="OverriddenPrice" ColumnName="OverriddenPrice" />
-          <ScalarProperty Name="NotifyAdminForQuantityBelow" ColumnName="NotifyAdminForQuantityBelow" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ProductAttributeValue">
       <EntityTypeMapping TypeName="DbModel.ProductAttributeValue">
         <MappingFragment StoreEntitySet="ProductAttributeValue">
@@ -4867,12 +3225,10 @@
           <ScalarProperty Name="AttributeValueTypeId" ColumnName="AttributeValueTypeId" />
           <ScalarProperty Name="AssociatedProductId" ColumnName="AssociatedProductId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ColorSquaresRgb" ColumnName="ColorSquaresRgb" />
           <ScalarProperty Name="PriceAdjustment" ColumnName="PriceAdjustment" />
           <ScalarProperty Name="WeightAdjustment" ColumnName="WeightAdjustment" />
           <ScalarProperty Name="Cost" ColumnName="Cost" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="IsPreSelected" ColumnName="IsPreSelected" />
           <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
           <ScalarProperty Name="PictureId" ColumnName="PictureId" />
         </MappingFragment>
@@ -4915,42 +3271,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="QueuedEmail">
-      <EntityTypeMapping TypeName="DbModel.QueuedEmail">
-        <MappingFragment StoreEntitySet="QueuedEmail">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="PriorityId" ColumnName="PriorityId" />
-          <ScalarProperty Name="From" ColumnName="From" />
-          <ScalarProperty Name="FromName" ColumnName="FromName" />
-          <ScalarProperty Name="To" ColumnName="To" />
-          <ScalarProperty Name="ToName" ColumnName="ToName" />
-          <ScalarProperty Name="ReplyTo" ColumnName="ReplyTo" />
-          <ScalarProperty Name="ReplyToName" ColumnName="ReplyToName" />
-          <ScalarProperty Name="CC" ColumnName="CC" />
-          <ScalarProperty Name="Bcc" ColumnName="Bcc" />
-          <ScalarProperty Name="Subject" ColumnName="Subject" />
-          <ScalarProperty Name="Body" ColumnName="Body" />
-          <ScalarProperty Name="AttachmentFilePath" ColumnName="AttachmentFilePath" />
-          <ScalarProperty Name="AttachmentFileName" ColumnName="AttachmentFileName" />
-          <ScalarProperty Name="AttachedDownloadId" ColumnName="AttachedDownloadId" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-          <ScalarProperty Name="SentTries" ColumnName="SentTries" />
-          <ScalarProperty Name="SentOnUtc" ColumnName="SentOnUtc" />
-          <ScalarProperty Name="EmailAccountId" ColumnName="EmailAccountId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="RecurringPayment">
       <EntityTypeMapping TypeName="DbModel.RecurringPayment">
         <MappingFragment StoreEntitySet="RecurringPayment">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CycleLength" ColumnName="CycleLength" />
-          <ScalarProperty Name="CyclePeriodId" ColumnName="CyclePeriodId" />
           <ScalarProperty Name="TotalCycles" ColumnName="TotalCycles" />
           <ScalarProperty Name="StartDateUtc" ColumnName="StartDateUtc" />
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="InitialOrderId" ColumnName="InitialOrderId" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -4969,7 +3296,6 @@
           <ScalarProperty Name="StaffNotes" ColumnName="StaffNotes" />
           <ScalarProperty Name="ReturnRequestStatusId" ColumnName="ReturnRequestStatusId" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-          <ScalarProperty Name="UpdatedOnUtc" ColumnName="UpdatedOnUtc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4991,31 +3317,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="RewardPointsHistory">
-      <EntityTypeMapping TypeName="DbModel.RewardPointsHistory">
-        <MappingFragment StoreEntitySet="RewardPointsHistory">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
-          <ScalarProperty Name="Points" ColumnName="Points" />
-          <ScalarProperty Name="PointsBalance" ColumnName="PointsBalance" />
-          <ScalarProperty Name="UsedAmount" ColumnName="UsedAmount" />
-          <ScalarProperty Name="Message" ColumnName="Message" />
-          <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
-          <ScalarProperty Name="UsedWithOrder_Id" ColumnName="UsedWithOrder_Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Shipment">
       <EntityTypeMapping TypeName="DbModel.Shipment">
         <MappingFragment StoreEntitySet="Shipment">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="OrderId" ColumnName="OrderId" />
           <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
-          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
           <ScalarProperty Name="ShippedDateUtc" ColumnName="ShippedDateUtc" />
           <ScalarProperty Name="DeliveryDateUtc" ColumnName="DeliveryDateUtc" />
-          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -5037,7 +3346,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -5049,11 +3357,7 @@
           <ScalarProperty Name="ShoppingCartTypeId" ColumnName="ShoppingCartTypeId" />
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-          <ScalarProperty Name="AttributesXml" ColumnName="AttributesXml" />
-          <ScalarProperty Name="CustomerEnteredPrice" ColumnName="CustomerEnteredPrice" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="RentalStartDateUtc" ColumnName="RentalStartDateUtc" />
-          <ScalarProperty Name="RentalEndDateUtc" ColumnName="RentalEndDateUtc" />
           <ScalarProperty Name="CreatedOnUtc" ColumnName="CreatedOnUtc" />
           <ScalarProperty Name="UpdatedOnUtc" ColumnName="UpdatedOnUtc" />
         </MappingFragment>
@@ -5065,9 +3369,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="CountryId" ColumnName="CountryId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
           <ScalarProperty Name="Published" ColumnName="Published" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -5077,15 +3379,10 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Url" ColumnName="Url" />
-          <ScalarProperty Name="SslEnabled" ColumnName="SslEnabled" />
-          <ScalarProperty Name="SecureUrl" ColumnName="SecureUrl" />
-          <ScalarProperty Name="Hosts" ColumnName="Hosts" />
-          <ScalarProperty Name="DefaultLanguageId" ColumnName="DefaultLanguageId" />
           <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
           <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
           <ScalarProperty Name="CompanyPhoneNumber" ColumnName="CompanyPhoneNumber" />
-          <ScalarProperty Name="CompanyVat" ColumnName="CompanyVat" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -5099,40 +3396,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TaxCategory">
-      <EntityTypeMapping TypeName="DbModel.TaxCategory">
-        <MappingFragment StoreEntitySet="TaxCategory">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TaxRate">
-      <EntityTypeMapping TypeName="DbModel.TaxRate">
-        <MappingFragment StoreEntitySet="TaxRate">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
-          <ScalarProperty Name="TaxCategoryId" ColumnName="TaxCategoryId" />
-          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
-          <ScalarProperty Name="StateProvinceId" ColumnName="StateProvinceId" />
-          <ScalarProperty Name="Zip" ColumnName="Zip" />
-          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TierPrice">
-      <EntityTypeMapping TypeName="DbModel.TierPrice">
-        <MappingFragment StoreEntitySet="TierPrice">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
-          <ScalarProperty Name="CustomerRoleId" ColumnName="CustomerRoleId" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Vendor">
       <EntityTypeMapping TypeName="DbModel.Vendor">
         <MappingFragment StoreEntitySet="Vendor">
@@ -5141,16 +3404,8 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="PictureId" ColumnName="PictureId" />
-          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
           <ScalarProperty Name="Active" ColumnName="Active" />
-          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
           <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
-          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
-          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
-          <ScalarProperty Name="PageSize" ColumnName="PageSize" />
-          <ScalarProperty Name="AllowCustomersToSelectPageSize" ColumnName="AllowCustomersToSelectPageSize" />
-          <ScalarProperty Name="PageSizeOptions" ColumnName="PageSizeOptions" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
